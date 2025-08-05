@@ -1,0 +1,46 @@
+# Configuration for GitHub Pages
+
+# Optional: Jekyll configuration (GitHub Pages uses Jekyll by default)
+# This file tells GitHub Pages how to process your site
+
+# Site settings
+title: "Mingyu Shu - Academic Homepage"
+description: "Personal academic website featuring research in experimental economics, quantitative history, and development economics"
+author: "Mingyu Shu"
+email: "shumingyu@foxmail.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include files in processing
+include:
+  - _pages
+
+# URL settings (will be set automatically by GitHub Pages)
+# url: "https://yourusername.github.io"
+# baseurl: "/repository-name"
+
+# Social links (optional)
+social:
+  email: shumingyu@foxmail.com
+  # orcid: "your-orcid-id"
+  # google_scholar: "your-scholar-id"
+  # researchgate: "your-rg-profile"
+
+# SEO settings
+lang: en
+timezone: Asia/Shanghai

@@ -1,0 +1,17 @@
+# 在项目文件夹中打开终端，然后运行以下命令：
+
+# 初始化git仓库
+git init
+
+# 添加远程仓库（替换为您的GitHub用户名和仓库名）
+git remote add origin https://github.com/您的用户名/您的仓库名.git
+
+# 添加所有文件
+git add .
+
+# 提交
+git commit -m "Initial commit - Academic homepage"
+
+# 创建main分支并推送
+git branch -M main
+git push -u origin main
