@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -429,8 +429,7 @@
 <section class="section" id="contact"><div class="container"><div class="reveal"><div class="section-label">Contact</div><h2 class="section-title">Get in touch</h2></div><div class="contact-grid" style="margin-top:32px;"><div class="contact-text reveal"><h3>Always happy to talk</h3><p>Whether you have feedback on my work, want to collaborate, or just want to chat about coffee, Go, or LeBron James, I would love to hear from you.</p><a href="mailto:mingyushu@outlook.com" class="contact-btn">Send Email &#8594;</a></div><div class="contact-links reveal"><a href="mailto:mingyushu@outlook.com" class="contact-link"><div><div class="contact-link-name">Email</div><div class="contact-link-sub">mingyushu@outlook.com</div></div><span class="contact-link-arrow">&#8594;</span></a><a href="https://scholar.google.com/citations?user=Mingyu-Shu" class="contact-link"><div><div class="contact-link-name">Google Scholar</div><div class="contact-link-sub">Mingyu Shu</div></div><span class="contact-link-arrow">&#8594;</span></a><a href="https://github.com/mingyushu" class="contact-link"><div><div class="contact-link-name">GitHub</div><div class="contact-link-sub">@mingyushu</div></div><span class="contact-link-arrow">&#8594;</span></a></div></div></div></section>
 <footer class="footer"><div class="container"><p>&copy; 2024 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer>
 <button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button>
-<div class="e-pet" id="petDimo" style="width:72px;height:84px;bottom:20px;left:60px;"><span class="e-pet-name">迪莫</span><div class="e-pet-bubble" id="bubbleDimo"></div><img src="pet-dimo.png" alt="迪莫"></div>
-<div class="e-pet" id="petNailong" style="width:84px;height:78px;bottom:20px;right:120px;"><span class="e-pet-name">奶龙</span><div class="e-pet-bubble" id="bubbleNailong"></div><img src="pet-nailong.png" alt="奶龙"></div>
+<div class="e-pet" id="petNailong" style="width:100px;height:93px;bottom:20px;right:120px;"><span class="e-pet-name">奶龙</span><div class="e-pet-bubble" id="bubbleNailong"></div><img src="pet-nailong.png" alt="奶龙"></div>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 <script>
 (function(){
@@ -481,16 +480,13 @@
 })();
 
 (function(){
-    var dimo=document.getElementById('petDimo'),nailong=document.getElementById('petNailong');
-    var bubbleD=document.getElementById('bubbleDimo'),bubbleN=document.getElementById('bubbleNailong');
-    if(!dimo||!nailong)return;
-    var dX=60,dY=window.innerHeight-104,nX=window.innerWidth-204,nY=window.innerHeight-98;
-    var dVx=1.2,dVy=0.8,nVx=-1,nVy=0.7;
-    var dState='walk',nState='walk';
-    var dTimer=0,nTimer=0;
-    var dMsgTimer=0,nMsgTimer=0;
-    var dimoMsgs=['我是迪莫！光系精灵~','勇往直前！','要一起冒险吗？','洛克王国最棒！','我发光啦！✨','想吃蛋糕...','主人加油！','嘿嘿~','好困...想睡觉','今天天气真好'];
-    var nailongMsgs=['我是奶龙！','好饿啊~','来玩呀！','吼~','我最可爱！','想吃冰淇淋','奶龙出击！','嗷呜~','抱抱~','今天吃什么？'];
+    var nailong=document.getElementById('petNailong');
+    var bubbleN=document.getElementById('bubbleNailong');
+    if(!nailong)return;
+    var nX=window.innerWidth/2-50,nY=window.innerHeight-113;
+    var nVx=1.1,nVy=0.6;
+    var nState='walk',nTimer=0,nMsgTimer=0;
+    var nailongMsgs=['我是奶龙！','好饿啊~','来玩呀！','吼~','我最可爱！','想吃冰淇淋','奶龙出击！','嗷呜~','抱抱~','今天吃什么？','主人加油！','嘿嘿~','好困...想睡觉','今天天气真好'];
     var greetMsgs=['欢迎来到主页！','你好呀~','终于来啦！','想我了吗？'];
     function showBubble(el,msg,dur){
         el.textContent=msg;el.classList.add('show');
@@ -501,57 +497,27 @@
         el.style.left=x+'px';el.style.bottom='auto';el.style.top=y+'px';
     }
     function animate(){
-        dTimer++;nTimer++;
-        if(dState==='walk'){
-            dX+=dVx;dY+=dVy;
-            if(dX<=0||dX>=window.innerWidth-72){dVx=-dVx;dimo.classList.add('wiggle');setTimeout(function(){dimo.classList.remove('wiggle')},300)}
-            if(dY<=0||dY>=window.innerHeight-84){dVy=-dVy;dimo.classList.add('bounce');setTimeout(function(){dimo.classList.remove('bounce')},400)}
-            if(dTimer%180===0){dState='idle';dTimer=0}
-        }else{
-            if(dTimer%60===0&&Math.random()<0.3){dimo.classList.add('bounce');setTimeout(function(){dimo.classList.remove('bounce')},400)}
-            if(dTimer>120){dState='walk';dTimer=0}
-        }
+        nTimer++;
         if(nState==='walk'){
             nX+=nVx;nY+=nVy;
-            if(nX<=0||nX>=window.innerWidth-84){nVx=-nVx;nailong.classList.add('wiggle');setTimeout(function(){nailong.classList.remove('wiggle')},300)}
-            if(nY<=0||nY>=window.innerHeight-78){nVy=-nVy;nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
+            if(nX<=0||nX>=window.innerWidth-100){nVx=-nVx;nailong.classList.add('wiggle');setTimeout(function(){nailong.classList.remove('wiggle')},300)}
+            if(nY<=0||nY>=window.innerHeight-93){nVy=-nVy;nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
             if(nTimer%200===0){nState='idle';nTimer=0}
         }else{
             if(nTimer%80===0&&Math.random()<0.3){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
             if(nTimer>100){nState='walk';nTimer=0}
         }
-        setPos(dimo,dX,dY);setPos(nailong,nX,nY);
-        dMsgTimer++;nMsgTimer++;
-        if(dMsgTimer>400+Math.random()*300){dMsgTimer=0;showBubble(bubbleD,dimoMsgs[Math.floor(Math.random()*dimoMsgs.length)],3500)}
+        setPos(nailong,nX,nY);
+        nMsgTimer++;
         if(nMsgTimer>450+Math.random()*350){nMsgTimer=0;showBubble(bubbleN,nailongMsgs[Math.floor(Math.random()*nailongMsgs.length)],3500)}
-        var dx=dX-nX,dy=dY-nY,dist=Math.sqrt(dx*dx+dy*dy);
-        if(dist<100){
-            if(dVx>0&&nVx<0||dVx<0&&nVx>0){}
-            else{dVx=-dVx;nVx=-nVx}
-            if(dist<60){
-                showBubble(bubbleD,'奶龙别撞我！',2000);
-                showBubble(bubbleN,'迪莫对不起~',2000);
-                dimo.classList.add('wiggle');nailong.classList.add('bounce');
-                setTimeout(function(){dimo.classList.remove('wiggle');nailong.classList.remove('bounce')},400);
-            }
-        }
         requestAnimationFrame(animate);
     }
-    dimo.addEventListener('click',function(){
-        showBubble(bubbleD,dimoMsgs[Math.floor(Math.random()*dimoMsgs.length)],3000);
-        dimo.classList.add('bounce');setTimeout(function(){dimo.classList.remove('bounce')},400);
-    });
     nailong.addEventListener('click',function(){
         showBubble(bubbleN,nailongMsgs[Math.floor(Math.random()*nailongMsgs.length)],3000);
         nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400);
     });
-    var greeted=false;
     setTimeout(function(){
-        if(!greeted){
-            greeted=true;
-            showBubble(bubbleD,greetMsgs[Math.floor(Math.random()*greetMsgs.length)],4000);
-            setTimeout(function(){showBubble(bubbleN,greetMsgs[Math.floor(Math.random()*greetMsgs.length)],4000)},1500);
-        }
+        showBubble(bubbleN,greetMsgs[Math.floor(Math.random()*greetMsgs.length)],4000);
     },3000);
     animate();
 })();
