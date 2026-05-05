@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -248,6 +248,17 @@
         .back-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;border:none;cursor:pointer;font-size:1rem;box-shadow:var(--shadow-hover);opacity:0;visibility:hidden;transform:translateY(8px);transition:0.3s var(--ease);z-index:90}
         .back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
         .back-top:hover{background:var(--primary-light)}
+        .e-pet{position:fixed;z-index:9999;cursor:pointer;user-select:none;transition:transform 0.15s ease;image-rendering:pixelated}
+        .e-pet:hover{transform:scale(1.15)!important}
+        .e-pet img{width:100%;height:100%;pointer-events:none}
+        .e-pet-bubble{position:absolute;top:-42px;left:50%;transform:translateX(-50%);background:#fff;border-radius:12px;padding:5px 12px;font-size:12px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.15);opacity:0;transition:opacity 0.3s;pointer-events:none;font-family:'Inter',sans-serif;color:var(--text-dark)}
+        .e-pet-bubble::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #fff}
+        .e-pet-bubble.show{opacity:1}
+        .e-pet-name{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:600;color:var(--primary);white-space:nowrap;pointer-events:none;font-family:'Inter',sans-serif;text-shadow:0 0 4px rgba(255,255,255,0.8)}
+        @keyframes petBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        @keyframes petWiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+        .e-pet.bounce{animation:petBounce 0.4s ease}
+        .e-pet.wiggle{animation:petWiggle 0.3s ease}
         .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s var(--ease),transform 0.6s var(--ease)}
         .reveal.visible{opacity:1;transform:translateY(0)}
         @media(max-width:900px){.hero-content{flex-direction:column-reverse;text-align:center;gap:32px;padding-top:100px;padding-bottom:60px}.hero-photo{width:180px;height:220px}.hero-photo-border{display:none}.hero-fields{justify-content:center}.about-grid{grid-template-columns:1fr;gap:28px}.fields-row{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.nav-links{display:none}.nav-toggle{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(250,249,247,0.97);backdrop-filter:blur(16px);padding:16px 28px;gap:14px;border-bottom:1px solid var(--border)}.nav-links.open a{color:var(--text-body)}.paper-item{flex-direction:column;gap:4px}.paper-keyword{white-space:normal;min-width:auto}.map-stats{gap:24px}.pg-book{grid-template-columns:1fr;justify-items:center;text-align:center}.pg-book-cover{width:140px}.coffee-grid{grid-template-columns:repeat(2,1fr)}.go-grid{grid-template-columns:1fr}.culture-grid{grid-template-columns:repeat(2,1fr)}.music-grid{grid-template-columns:1fr}.lebron-gallery{grid-template-columns:repeat(2,1fr)}}
@@ -418,6 +429,8 @@
 <section class="section" id="contact"><div class="container"><div class="reveal"><div class="section-label">Contact</div><h2 class="section-title">Get in touch</h2></div><div class="contact-grid" style="margin-top:32px;"><div class="contact-text reveal"><h3>Always happy to talk</h3><p>Whether you have feedback on my work, want to collaborate, or just want to chat about coffee, Go, or LeBron James, I would love to hear from you.</p><a href="mailto:mingyushu@outlook.com" class="contact-btn">Send Email &#8594;</a></div><div class="contact-links reveal"><a href="mailto:mingyushu@outlook.com" class="contact-link"><div><div class="contact-link-name">Email</div><div class="contact-link-sub">mingyushu@outlook.com</div></div><span class="contact-link-arrow">&#8594;</span></a><a href="https://scholar.google.com/citations?user=Mingyu-Shu" class="contact-link"><div><div class="contact-link-name">Google Scholar</div><div class="contact-link-sub">Mingyu Shu</div></div><span class="contact-link-arrow">&#8594;</span></a><a href="https://github.com/mingyushu" class="contact-link"><div><div class="contact-link-name">GitHub</div><div class="contact-link-sub">@mingyushu</div></div><span class="contact-link-arrow">&#8594;</span></a></div></div></div></section>
 <footer class="footer"><div class="container"><p>&copy; 2024 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer>
 <button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button>
+<div class="e-pet" id="petDimo" style="width:72px;height:84px;bottom:20px;left:60px;"><span class="e-pet-name">迪莫</span><div class="e-pet-bubble" id="bubbleDimo"></div><img src="pet-dimo.png" alt="迪莫"></div>
+<div class="e-pet" id="petNailong" style="width:84px;height:78px;bottom:20px;right:120px;"><span class="e-pet-name">奶龙</span><div class="e-pet-bubble" id="bubbleNailong"></div><img src="pet-nailong.png" alt="奶龙"></div>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 <script>
 (function(){
@@ -465,6 +478,82 @@
         {sel:'#life-music .life-sub-painting-img',fb:'#life-music .life-sub-painting-fallback',urls:['painting-music.jpg','https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caravaggio_-_I_suonatori_%28musicians%29.jpg/960px-Caravaggio_-_I_suonatori_%28musicians%29.jpg']}
     ];
     cfgs.forEach(function(c){var img=document.querySelector(c.sel),fb=c.fb?document.querySelector(c.fb):null;if(img)tryLoadPainting(img,fb,c.urls)});
+})();
+
+(function(){
+    var dimo=document.getElementById('petDimo'),nailong=document.getElementById('petNailong');
+    var bubbleD=document.getElementById('bubbleDimo'),bubbleN=document.getElementById('bubbleNailong');
+    if(!dimo||!nailong)return;
+    var dX=60,dY=window.innerHeight-104,nX=window.innerWidth-204,nY=window.innerHeight-98;
+    var dVx=1.2,dVy=0.8,nVx=-1,nVy=0.7;
+    var dState='walk',nState='walk';
+    var dTimer=0,nTimer=0;
+    var dMsgTimer=0,nMsgTimer=0;
+    var dimoMsgs=['我是迪莫！光系精灵~','勇往直前！','要一起冒险吗？','洛克王国最棒！','我发光啦！✨','想吃蛋糕...','主人加油！','嘿嘿~','好困...想睡觉','今天天气真好'];
+    var nailongMsgs=['我是奶龙！','好饿啊~','来玩呀！','吼~','我最可爱！','想吃冰淇淋','奶龙出击！','嗷呜~','抱抱~','今天吃什么？'];
+    var greetMsgs=['欢迎来到主页！','你好呀~','终于来啦！','想我了吗？'];
+    function showBubble(el,msg,dur){
+        el.textContent=msg;el.classList.add('show');
+        clearTimeout(el._tid);
+        el._tid=setTimeout(function(){el.classList.remove('show')},dur||3000);
+    }
+    function setPos(el,x,y){
+        el.style.left=x+'px';el.style.bottom='auto';el.style.top=y+'px';
+    }
+    function animate(){
+        dTimer++;nTimer++;
+        if(dState==='walk'){
+            dX+=dVx;dY+=dVy;
+            if(dX<=0||dX>=window.innerWidth-72){dVx=-dVx;dimo.classList.add('wiggle');setTimeout(function(){dimo.classList.remove('wiggle')},300)}
+            if(dY<=0||dY>=window.innerHeight-84){dVy=-dVy;dimo.classList.add('bounce');setTimeout(function(){dimo.classList.remove('bounce')},400)}
+            if(dTimer%180===0){dState='idle';dTimer=0}
+        }else{
+            if(dTimer%60===0&&Math.random()<0.3){dimo.classList.add('bounce');setTimeout(function(){dimo.classList.remove('bounce')},400)}
+            if(dTimer>120){dState='walk';dTimer=0}
+        }
+        if(nState==='walk'){
+            nX+=nVx;nY+=nVy;
+            if(nX<=0||nX>=window.innerWidth-84){nVx=-nVx;nailong.classList.add('wiggle');setTimeout(function(){nailong.classList.remove('wiggle')},300)}
+            if(nY<=0||nY>=window.innerHeight-78){nVy=-nVy;nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
+            if(nTimer%200===0){nState='idle';nTimer=0}
+        }else{
+            if(nTimer%80===0&&Math.random()<0.3){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
+            if(nTimer>100){nState='walk';nTimer=0}
+        }
+        setPos(dimo,dX,dY);setPos(nailong,nX,nY);
+        dMsgTimer++;nMsgTimer++;
+        if(dMsgTimer>400+Math.random()*300){dMsgTimer=0;showBubble(bubbleD,dimoMsgs[Math.floor(Math.random()*dimoMsgs.length)],3500)}
+        if(nMsgTimer>450+Math.random()*350){nMsgTimer=0;showBubble(bubbleN,nailongMsgs[Math.floor(Math.random()*nailongMsgs.length)],3500)}
+        var dx=dX-nX,dy=dY-nY,dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<100){
+            if(dVx>0&&nVx<0||dVx<0&&nVx>0){}
+            else{dVx=-dVx;nVx=-nVx}
+            if(dist<60){
+                showBubble(bubbleD,'奶龙别撞我！',2000);
+                showBubble(bubbleN,'迪莫对不起~',2000);
+                dimo.classList.add('wiggle');nailong.classList.add('bounce');
+                setTimeout(function(){dimo.classList.remove('wiggle');nailong.classList.remove('bounce')},400);
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    dimo.addEventListener('click',function(){
+        showBubble(bubbleD,dimoMsgs[Math.floor(Math.random()*dimoMsgs.length)],3000);
+        dimo.classList.add('bounce');setTimeout(function(){dimo.classList.remove('bounce')},400);
+    });
+    nailong.addEventListener('click',function(){
+        showBubble(bubbleN,nailongMsgs[Math.floor(Math.random()*nailongMsgs.length)],3000);
+        nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400);
+    });
+    var greeted=false;
+    setTimeout(function(){
+        if(!greeted){
+            greeted=true;
+            showBubble(bubbleD,greetMsgs[Math.floor(Math.random()*greetMsgs.length)],4000);
+            setTimeout(function(){showBubble(bubbleN,greetMsgs[Math.floor(Math.random()*greetMsgs.length)],4000)},1500);
+        }
+    },3000);
+    animate();
 })();
 </script>
 </body>
