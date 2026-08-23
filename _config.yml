@@ -1,0 +1,20 @@
+title: "Mingyu Shu — Academic Homepage"
+description: "Personal academic website — Experimental Economics, Quantitative History, and Development Economics"
+author: "Mingyu Shu"
+email: "shumingyu@foxmail.com"
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+lang: en
+timezone: Asia/Shanghai
