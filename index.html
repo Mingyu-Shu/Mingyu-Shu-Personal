@@ -331,17 +331,16 @@
         .back-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;border:none;cursor:pointer;font-size:1.05rem;box-shadow:var(--shadow-hover);opacity:0;visibility:hidden;transform:translateY(8px);transition:0.3s var(--ease);z-index:90}
         .back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
         .back-top:hover{background:var(--primary-light)}
-        .e-pet{position:fixed;z-index:9999;cursor:pointer;user-select:none;transition:transform 0.15s ease;image-rendering:pixelated}
-        .e-pet:hover{transform:scale(1.15)!important}
-        .e-pet img{width:100%;height:100%;pointer-events:none}
+        .e-pet{position:fixed;z-index:9999;cursor:grab;user-select:none;transition:transform 0.2s ease;image-rendering:pixelated}
+        .e-pet:hover{transform:scale(1.12) rotate(-4deg)}
+        .e-pet.dragging{cursor:grabbing;transition:none;transform:none!important}
+        .e-pet img{width:100%;height:100%;pointer-events:none;display:block}
         .e-pet-bubble{position:absolute;top:-42px;left:50%;transform:translateX(-50%);background:#fff;border-radius:12px;padding:5px 12px;font-size:12px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.15);opacity:0;transition:opacity 0.3s;pointer-events:none;font-family:'Inter',sans-serif;color:var(--text-dark)}
         .e-pet-bubble::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid #fff}
         .e-pet-bubble.show{opacity:1}
         .e-pet-name{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:600;color:var(--primary);white-space:nowrap;pointer-events:none;font-family:'Inter',sans-serif;text-shadow:0 0 4px rgba(255,255,255,0.8)}
                 @keyframes petBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-                @keyframes petWiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
                 .e-pet.bounce{animation:petBounce 0.4s ease}
-                .e-pet.wiggle{animation:petWiggle 0.3s ease}
                 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s var(--ease),transform 0.6s var(--ease)}
                 .reveal.visible{opacity:1;transform:translateY(0)}
                 @media(max-width:900px){.hero-content{flex-direction:column-reverse;text-align:center;gap:32px;padding-top:100px;padding-bottom:60px}.hero-photo{width:180px;height:220px}.hero-fields{justify-content:center}.about-grid{grid-template-columns:1fr;gap:28px}.fields-row{grid-template-columns:1fr}.wip-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.nav-links{display:none}.nav-toggle{display:block}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(250,249,247,0.97);backdrop-filter:blur(16px);padding:16px 28px;gap:14px;border-bottom:1px solid var(--border)}.nav-links.open a{color:var(--text-body)}.map-stats{gap:24px}.pg-book{grid-template-columns:1fr;justify-items:center;text-align:center}.pg-book-cover{width:140px}.coffee-grid{grid-template-columns:repeat(2,1fr)}.go-grid{grid-template-columns:1fr}.culture-grid{grid-template-columns:repeat(2,1fr)}.music-grid{grid-template-columns:1fr}.lebron-gallery{grid-template-columns:repeat(2,1fr)}}
@@ -586,32 +585,20 @@
             var nailong=document.getElementById('petNailong');
             var bubbleN=document.getElementById('bubbleNailong');
             if(!nailong)return;
-            var nX=window.innerWidth/2-50,nY=window.innerHeight-113;
-            var nVx=1.1,nVy=0.6;
-            var nState='walk',nTimer=0,nMsgTimer=0;
-            var nailongMsgs=['I am Nailong!','So hungry...','Come play!','Roar~','I am the cutest!','Want ice cream','Nailong attacks!','Awoo~','Hug me!','What to eat today?','Keep going, friend!','Hehe~','So sleepy...','Great weather today'];
-            var greetMsgs=['Welcome to my page!','Hello there~','Finally here!','Miss me?'];
+            var msgs=['Scroll down to see my research!','Reading papers is my hobby~','Economics is fun, right?','Drag me anywhere you like!','Nailong approves of this page!','Which paper should I read next?','Hmm... an interesting graph!','Keep going, friend!'];
             function showBubble(el,msg,dur){el.textContent=msg;el.classList.add('show');clearTimeout(el._tid);el._tid=setTimeout(function(){el.classList.remove('show')},dur||3000)}
-            function setPos(el,x,y){el.style.left=x+'px';el.style.bottom='auto';el.style.top=y+'px'}
-            function animate(){
-                nTimer++;
-                if(nState==='walk'){
-                    nX+=nVx;nY+=nVy;
-                    if(nX<=0||nX>=window.innerWidth-100){nVx=-nVx;nailong.classList.add('wiggle');setTimeout(function(){nailong.classList.remove('wiggle')},300)}
-                    if(nY<=0||nY>=window.innerHeight-93){nVy=-nVy;nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
-                    if(nTimer%200===0){nState='idle';nTimer=0}
-                }else{
-                    if(nTimer%80===0&&Math.random()<0.3){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
-                    if(nTimer>100){nState='walk';nTimer=0}
-                }
-                setPos(nailong,nX,nY);
-                nMsgTimer++;
-                if(nMsgTimer>450+Math.random()*350){nMsgTimer=0;showBubble(bubbleN,nailongMsgs[Math.floor(Math.random()*nailongMsgs.length)],3500)}
-                requestAnimationFrame(animate);
-            }
-            nailong.addEventListener('click',function(){showBubble(bubbleN,nailongMsgs[Math.floor(Math.random()*nailongMsgs.length)],3000);nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)});
-            setTimeout(function(){showBubble(bubbleN,greetMsgs[Math.floor(Math.random()*greetMsgs.length)],4000)},3000);
-            animate();
+            function hop(){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
+            var lastActive=Date.now();
+            function activity(){lastActive=Date.now()}
+            nailong.addEventListener('click',function(){activity();showBubble(bubbleN,msgs[Math.floor(Math.random()*msgs.length)],3000);hop()});
+            var hoverShown=0;
+            nailong.addEventListener('mouseenter',function(){activity();var now=Date.now();if(now-hoverShown>6000){hoverShown=now;showBubble(bubbleN,'Hi! I am Nailong. Click or drag me~',2500)}});
+            var dragging=false,offX=0,offY=0;
+            nailong.addEventListener('mousedown',function(e){activity();var r=nailong.getBoundingClientRect();nailong.style.left=r.left+'px';nailong.style.top=r.top+'px';nailong.style.bottom='auto';nailong.style.right='auto';offX=e.clientX-r.left;offY=e.clientY-r.top;dragging=true;nailong.classList.add('dragging');e.preventDefault()});
+            document.addEventListener('mousemove',function(e){if(!dragging)return;var x=e.clientX-offX,y=e.clientY-offY;x=Math.max(0,Math.min(window.innerWidth-nailong.offsetWidth,x));y=Math.max(0,Math.min(window.innerHeight-nailong.offsetHeight,y));nailong.style.left=x+'px';nailong.style.top=y+'px'});
+            document.addEventListener('mouseup',function(){if(!dragging)return;dragging=false;nailong.classList.remove('dragging');showBubble(bubbleN,'Thanks for moving me!',2000)});
+            setInterval(function(){if(Date.now()-lastActive>60000)showBubble(bubbleN,'Zzz...',2500)},60000);
+            setTimeout(function(){showBubble(bubbleN,'Welcome! I am Nailong, your corner buddy.',4000)},2500);
         })();
         </script>
         </body>
