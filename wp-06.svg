@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="A spotlighted butterfly and a species left in the dark">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f4ef"/>
+      <stop offset="1" stop-color="#e6e2d9"/>
+    </linearGradient>
+    <linearGradient id="beam6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a84c" stop-opacity="0.5"/>
+      <stop offset="0.7" stop-color="#c9a84c" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#c9a84c" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="wing6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0bd6a"/>
+      <stop offset="1" stop-color="#9a7d5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bg6)"/>
+  <path d="M232 34 L360 404 H104 Z" fill="url(#beam6)"/>
+  <g>
+    <path d="M232 250 C198 196 132 186 118 224 C106 258 150 292 232 286 Z" fill="url(#wing6)"/>
+    <path d="M232 250 C266 196 332 186 346 224 C358 258 314 292 232 286 Z" fill="url(#wing6)"/>
+    <path d="M232 292 C204 268 156 268 146 292 C138 314 178 330 232 318 Z" fill="#c9a84c" opacity="0.85"/>
+    <path d="M232 292 C260 268 308 268 318 292 C326 314 286 330 232 318 Z" fill="#c9a84c" opacity="0.85"/>
+    <ellipse cx="232" cy="286" rx="13" ry="52" fill="#4a5568"/>
+    <path d="M226 236 C208 208 196 196 184 190" fill="none" stroke="#4a5568" stroke-width="4" stroke-linecap="round"/>
+    <path d="M238 236 C256 208 268 196 280 190" fill="none" stroke="#4a5568" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="182" cy="188" r="4.5" fill="#4a5568"/>
+    <circle cx="282" cy="188" r="4.5" fill="#4a5568"/>
+  </g>
+  <g opacity="0.42">
+    <ellipse cx="68" cy="352" rx="34" ry="22" fill="#2a2d35"/>
+    <ellipse cx="40" cy="372" rx="28" ry="17" fill="#2a2d35"/>
+    <path d="M112 344 C136 322 150 308 158 296" fill="none" stroke="#1a1d24" stroke-width="7" stroke-linecap="round"/>
+    <path d="M52 336 C46 320 44 308 52 300" fill="none" stroke="#1a1d24" stroke-width="4" stroke-linecap="round"/>
+    <g stroke="#1a1d24" stroke-width="3.4" stroke-linecap="round">
+      <path d="M60 378 V394"/><path d="M92 384 V400"/><path d="M34 386 V400"/>
+    </g>
+  </g>
+  <g opacity="0.34">
+    <ellipse cx="424" cy="392" rx="26" ry="15" fill="#2a2d35"/>
+    <path d="M400 384 C392 370 390 360 398 352" fill="none" stroke="#1a1d24" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#1a1d24" stroke-width="3" stroke-linecap="round">
+      <path d="M412 404 V416"/><path d="M436 404 V416"/>
+    </g>
+  </g>
+  <g>
+    <rect x="60" y="428" width="360" height="20" rx="8" fill="#ddd9d1"/>
+    <rect x="60" y="428" width="252" height="20" rx="8" fill="#c9a84c"/>
+    <rect x="316" y="428" width="80" height="20" rx="8" fill="#4a5568" opacity="0.72"/>
+    <path d="M312 424 v28" stroke="#f6f4ef" stroke-width="3"/>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

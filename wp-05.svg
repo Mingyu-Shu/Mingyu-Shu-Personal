@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="Transaction queue with a front-running block and mining tools">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#eae6de"/>
+    </linearGradient>
+    <linearGradient id="txn5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6f4f0"/>
+      <stop offset="1" stop-color="#ddd9d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bg5)"/>
+  <g stroke="#9a9eb0" stroke-width="1.8" stroke-dasharray="7 8" opacity="0.75" fill="none">
+    <path d="M62 76 V404"/>
+  </g>
+  <g>
+    <rect x="62" y="66" width="196" height="52" rx="8" fill="url(#txn5)" stroke="#4a5568" stroke-width="2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M78 84 H200"/><path d="M78 100 H140"/>
+    </g>
+  </g>
+  <g>
+    <rect x="62" y="136" width="196" height="52" rx="8" fill="url(#txn5)" stroke="#4a5568" stroke-width="2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M78 154 H212"/><path d="M78 170 H156"/>
+    </g>
+  </g>
+  <g>
+    <rect x="62" y="206" width="196" height="52" rx="8" fill="url(#txn5)" stroke="#4a5568" stroke-width="2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M78 224 H182"/><path d="M78 240 H128"/>
+    </g>
+  </g>
+  <g>
+    <rect x="62" y="276" width="196" height="52" rx="8" fill="url(#txn5)" stroke="#4a5568" stroke-width="2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M78 294 H206"/><path d="M78 310 H150"/>
+    </g>
+  </g>
+  <g>
+    <rect x="62" y="346" width="196" height="52" rx="8" fill="url(#txn5)" stroke="#4a5568" stroke-width="2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M78 364 H190"/><path d="M78 380 H134"/>
+    </g>
+  </g>
+  <g>
+    <rect x="30" y="60" width="196" height="64" rx="9" fill="#722f37"/>
+    <rect x="30" y="60" width="196" height="64" rx="9" fill="#a55b5b" opacity="0.4"/>
+    <g stroke="#f4f2ee" stroke-opacity="0.85" stroke-width="3" stroke-linecap="round">
+      <path d="M48 82 H196"/><path d="M48 100 H136"/>
+    </g>
+    <path d="M232 92 l20 -16 v32 Z" fill="#c9a84c"/>
+  </g>
+  <g fill="none" stroke="#c9a84c" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 8">
+    <path d="M300 392 C392 392 414 300 372 176 C356 130 316 104 262 100"/>
+  </g>
+  <g fill="none" stroke="#c9a84c" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M276 84 L256 100 L278 112"/>
+  </g>
+  <g>
+    <path d="M340 236 L420 316" stroke="#9a7d5a" stroke-width="11" stroke-linecap="round"/>
+    <path d="M320 300 L372 352" stroke="#9a7d5a" stroke-width="11" stroke-linecap="round" opacity="0.85"/>
+    <path d="M330 226 C368 216 404 240 416 268 C396 264 372 256 356 240 Z" fill="#4a5568"/>
+  </g>
+  <g fill="#5b7fa5" opacity="0.85">
+    <rect x="42" y="424" width="26" height="26" rx="4"/>
+    <rect x="78" y="410" width="26" height="40" rx="4" fill="#7c6da5"/>
+    <rect x="114" y="418" width="26" height="32" rx="4"/>
+    <rect x="150" y="400" width="26" height="50" rx="4" fill="#7c6da5"/>
+    <rect x="186" y="414" width="26" height="36" rx="4"/>
+    <rect x="222" y="392" width="26" height="58" rx="4" fill="#7c6da5"/>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

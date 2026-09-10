@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="An elite network with severed ties above a Han-style gate">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e8e4dc"/>
+    </linearGradient>
+    <linearGradient id="roof8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2d35"/>
+      <stop offset="1" stop-color="#1a1d24"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bg8)"/>
+  <g stroke="#7c6da5" stroke-width="2.6" stroke-opacity="0.7" fill="none">
+    <path d="M104 108 L204 78"/><path d="M204 78 L296 116"/>
+    <path d="M296 116 L372 86"/><path d="M104 108 L156 190"/>
+    <path d="M204 78 L214 176"/><path d="M296 116 L286 196"/>
+    <path d="M156 190 L214 176"/><path d="M214 176 L286 196"/>
+    <path d="M156 190 L118 268"/><path d="M286 196 L340 262"/>
+    <path d="M214 176 L232 272"/><path d="M118 268 L232 272"/>
+    <path d="M340 262 L232 272"/>
+  </g>
+  <g stroke="#a55b5b" stroke-width="2.6" stroke-dasharray="6 9" fill="none" opacity="0.9">
+    <path d="M204 78 L156 24"/>
+    <path d="M296 116 L352 28"/>
+    <path d="M340 262 L420 300"/>
+  </g>
+  <g fill="#7c6da5">
+    <circle cx="104" cy="108" r="12"/><circle cx="204" cy="78" r="14"/>
+    <circle cx="296" cy="116" r="12"/><circle cx="156" cy="190" r="11"/>
+    <circle cx="214" cy="176" r="15"/><circle cx="286" cy="196" r="11"/>
+    <circle cx="118" cy="268" r="10"/><circle cx="232" cy="272" r="13"/>
+  </g>
+  <g fill="none" stroke="#a55b5b" stroke-width="4.4" stroke-linecap="round">
+    <path d="M356 74 L392 110"/><path d="M392 74 L356 110"/>
+    <path d="M128 14 L164 50"/><path d="M164 14 L128 50"/>
+    <path d="M404 282 L440 318"/><path d="M440 282 L404 318"/>
+  </g>
+  <g fill="#4a5568">
+    <circle cx="340" cy="262" r="9" fill="#7c6da5" opacity="0.55"/>
+    <circle cx="422" cy="300" r="7" fill="#9a9eb0" opacity="0.55"/>
+  </g>
+  <g>
+    <path d="M64 356 C110 334 152 344 240 336 C328 344 370 334 416 356 C386 366 342 362 240 362 C138 362 94 366 64 356 Z" fill="url(#roof8)"/>
+    <rect x="86" y="362" width="308" height="12" rx="4" fill="#3d4250"/>
+    <rect x="108" y="374" width="22" height="74" fill="#2a2d35"/>
+    <rect x="204" y="374" width="22" height="74" fill="#2a2d35" opacity="0.75"/>
+    <rect x="302" y="374" width="22" height="74" fill="#2a2d35"/>
+    <rect x="330" y="374" width="22" height="74" fill="#2a2d35" opacity="0.75"/>
+    <path d="M150 448 V392 h120 v56" fill="none" stroke="#c9a84c" stroke-width="3.4"/>
+    <circle cx="240" cy="356" r="6" fill="#c9a84c"/>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

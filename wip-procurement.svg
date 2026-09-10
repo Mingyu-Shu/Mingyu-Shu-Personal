@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="A falling price tag beside surgical instruments and a heart monitor trace">
+  <defs>
+    <linearGradient id="bgPr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e8e5de"/>
+    </linearGradient>
+    <linearGradient id="tagPr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0bd6a"/>
+      <stop offset="1" stop-color="#9a7d5a"/>
+    </linearGradient>
+    <linearGradient id="bandPr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f4f0"/>
+      <stop offset="1" stop-color="#ddd9d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bgPr)"/>
+  <g>
+    <rect x="48" y="60" width="196" height="120" rx="10" fill="url(#bandPr)" stroke="#4a5568" stroke-width="3"/>
+    <g fill="#4a5568" opacity="0.6">
+      <rect x="70" y="86" width="152" height="12" rx="4"/>
+      <rect x="70" y="112" width="104" height="12" rx="4"/>
+      <rect x="70" y="138" width="130" height="12" rx="4"/>
+    </g>
+    <path d="M48 60 L96 26 L244 26 L244 60" fill="none" stroke="#9a7d5a" stroke-width="3"/>
+    <path d="M148 26 V176" stroke="#9a9eb0" stroke-width="1.6" stroke-dasharray="7 7" opacity="0.5"/>
+  </g>
+  <g>
+    <path d="M286 92 L378 92 L392 106 V206 L286 206 Z" fill="url(#tagPr)" opacity="0.95"/>
+    <path d="M378 92 L392 106 L378 120 Z" fill="#f6f4ef" opacity="0.75"/>
+    <circle cx="322" cy="140" r="14" fill="#faf9f7" opacity="0.9"/>
+    <circle cx="322" cy="140" r="6" fill="#9a7d5a"/>
+    <g stroke="#faf9f7" stroke-width="7" stroke-linecap="round">
+      <path d="M324 172 H372"/>
+      <path d="M324 192 H356"/>
+    </g>
+    <g fill="none" stroke="#a55b5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M290 240 C316 240 322 224 336 224 C350 224 356 264 372 264 C388 264 394 240 414 240"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#c9a84c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 138 L288 156 L320 168 L306 196"/>
+  </g>
+  <g>
+    <path d="M92 306 L268 306 L268 326 L92 326 Z" fill="#b9c4cf"/>
+    <path d="M268 306 L340 300 L344 318 L268 326 Z" fill="#8d9aa8"/>
+    <path d="M92 306 L72 300 L70 316 L92 326 Z" fill="#8d9aa8"/>
+    <path d="M124 306 V282 H236 V306" fill="#f6f4f0" stroke="#4a5568" stroke-width="2.4"/>
+    <path d="M180 282 V306" stroke="#4a5568" stroke-width="2" opacity="0.6"/>
+  </g>
+  <g>
+    <path d="M96 410 H392" stroke="#4a5568" stroke-width="2.4"/>
+    <g fill="#5a8f7a" opacity="0.8">
+      <rect x="112" y="358" width="34" height="52" rx="4"/>
+      <rect x="170" y="336" width="34" height="74" rx="4"/>
+      <rect x="228" y="374" width="34" height="36" rx="4"/>
+      <rect x="286" y="348" width="34" height="62" rx="4"/>
+      <rect x="344" y="382" width="34" height="28" rx="4"/>
+    </g>
+    <g fill="none" stroke="#a55b5b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M110 330 C180 350 268 372 366 396"/>
+      <path d="M346 382 L368 398 L360 374"/>
+    </g>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="Chained blocks with a lock and an interior optimum curve">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#ece8e0"/>
+    </linearGradient>
+    <linearGradient id="blk4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f4f0"/>
+      <stop offset="1" stop-color="#e2ded6"/>
+    </linearGradient>
+    <linearGradient id="curve4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a84c"/>
+      <stop offset="1" stop-color="#9a7d5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bg4)"/>
+  <g stroke="#9a9eb0" stroke-width="5" stroke-linecap="round">
+    <path d="M104 152 H136"/><path d="M204 152 H236"/><path d="M304 152 H336"/>
+  </g>
+  <g>
+    <rect x="36" y="102" width="68" height="68" rx="9" fill="url(#blk4)" stroke="#4a5568" stroke-width="2.2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M48 118 H92"/><path d="M48 132 H80"/><path d="M48 146 H88"/>
+    </g>
+  </g>
+  <g>
+    <rect x="136" y="96" width="80" height="80" rx="10" fill="#722f37"/>
+    <path d="M162 138 v-12 a14 14 0 0 1 28 0 v12" fill="none" stroke="#c9a84c" stroke-width="6" stroke-linecap="round"/>
+    <rect x="154" y="136" width="44" height="34" rx="6" fill="#c9a84c"/>
+    <circle cx="176" cy="152" r="5" fill="#722f37"/>
+  </g>
+  <g>
+    <rect x="236" y="102" width="68" height="68" rx="9" fill="url(#blk4)" stroke="#4a5568" stroke-width="2.2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M248 118 H292"/><path d="M248 132 H276"/>
+    </g>
+  </g>
+  <g>
+    <rect x="336" y="102" width="68" height="68" rx="9" fill="url(#blk4)" stroke="#4a5568" stroke-width="2.2"/>
+    <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+      <path d="M348 118 H392"/><path d="M348 132 H400"/>
+    </g>
+  </g>
+  <g>
+    <path d="M240 336 C150 336 96 300 88 232" fill="none" stroke="url(#curve4)" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+    <path d="M88 232 C140 336 200 336 240 336 C280 336 340 336 392 232" fill="none" stroke="url(#curve4)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <circle cx="240" cy="336" r="11" fill="#c9a84c"/>
+  <circle cx="240" cy="336" r="19" fill="none" stroke="#c9a84c" stroke-width="2.4" stroke-opacity="0.6"/>
+  <g stroke="#9a9eb0" stroke-width="1.6" stroke-dasharray="6 7" opacity="0.85">
+    <path d="M240 336 V408"/><path d="M56 336 H424"/>
+  </g>
+  <g stroke="#9a9eb0" stroke-width="3" stroke-linecap="round">
+    <path d="M56 336 V348"/><path d="M148 336 V346"/><path d="M240 336 V348"/>
+    <path d="M332 336 V346"/><path d="M424 336 V348"/>
+  </g>
+  <g fill="#4a5568" opacity="0.55">
+    <rect x="70" y="404" width="340" height="9" rx="4"/>
+    <rect x="70" y="404" width="132" height="9" rx="4" fill="#c9a84c"/>
+  </g>
+  <path d="M404 404 l14 22 12 -22 Z" fill="#c9a84c" opacity="0.85"/>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

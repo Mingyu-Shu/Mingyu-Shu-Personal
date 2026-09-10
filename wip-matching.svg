@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="Cross-border matching links between two populations and a shared disease burden">
+  <defs>
+    <linearGradient id="bgM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e7e4dd"/>
+    </linearGradient>
+    <radialGradient id="globeM" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#7fa8c9"/>
+      <stop offset="1" stop-color="#3f6b8f"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bgM)"/>
+  <g>
+    <circle cx="150" cy="182" r="98" fill="url(#globeM)"/>
+    <ellipse cx="150" cy="182" rx="98" ry="40" fill="none" stroke="#faf9f7" stroke-width="1.6" stroke-opacity="0.5"/>
+    <ellipse cx="150" cy="182" rx="62" ry="98" fill="none" stroke="#faf9f7" stroke-width="1.6" stroke-opacity="0.5"/>
+    <path d="M60 240 C120 258 190 254 240 232" fill="none" stroke="#c9a84c" stroke-width="2.4" stroke-dasharray="8 8" opacity="0.85"/>
+  </g>
+  <g>
+    <path d="M300 118 a86 86 0 0 1 0 172 a86 86 0 0 1 0 -172" fill="none" stroke="#5a8f7a" stroke-width="3" stroke-dasharray="10 9" opacity="0.75"/>
+    <circle cx="368" cy="204" r="20" fill="#5a8f7a" opacity="0.35"/>
+    <circle cx="316" cy="252" r="14" fill="#5a8f7a" opacity="0.3"/>
+  </g>
+  <g fill="#9a7d5a">
+    <circle cx="150" cy="150" r="7"/>
+    <circle cx="196" cy="196" r="7"/>
+    <circle cx="112" cy="222" r="7"/>
+    <circle cx="330" cy="150" r="7"/>
+    <circle cx="372" cy="252" r="7"/>
+    <circle cx="300" cy="118" r="7"/>
+  </g>
+  <g fill="none" stroke="#c9a84c" stroke-width="3.2" stroke-dasharray="7 7">
+    <path d="M150 150 L330 150"/>
+    <path d="M196 196 L372 252"/>
+    <path d="M112 222 L300 118"/>
+  </g>
+  <g fill="#a55b5b" opacity="0.9">
+    <circle cx="236" cy="176" r="10"/>
+    <circle cx="246" cy="166" r="4"/>
+    <circle cx="228" cy="166" r="4"/>
+    <circle cx="236" cy="188" r="4"/>
+    <circle cx="268" cy="242" r="8"/>
+    <circle cx="276" cy="234" r="3.4"/>
+    <circle cx="261" cy="234" r="3.4"/>
+  </g>
+  <g>
+    <path d="M240 344 C240 320 210 316 210 300 C210 286 224 280 240 292 C256 280 270 286 270 300 C270 316 240 320 240 344 Z" fill="#c9a84c" opacity="0.92"/>
+    <path d="M240 372 C240 356 220 352 220 340 C220 330 230 326 240 334 C250 326 260 330 260 340 C260 352 240 356 240 372 Z" fill="#9a7d5a" opacity="0.85"/>
+  </g>
+  <g fill="none" stroke="#9a9eb0" stroke-width="2" stroke-dasharray="7 8" opacity="0.75">
+    <path d="M52 404 H428"/>
+  </g>
+  <g>
+    <rect x="70" y="418" width="46" height="26" rx="5" fill="#4a5568" opacity="0.7"/>
+    <rect x="132" y="410" width="46" height="34" rx="5" fill="#a55b5b" opacity="0.75"/>
+    <rect x="194" y="424" width="46" height="20" rx="5" fill="#4a5568" opacity="0.7"/>
+    <rect x="256" y="406" width="46" height="38" rx="5" fill="#a55b5b" opacity="0.75"/>
+    <rect x="318" y="420" width="46" height="24" rx="5" fill="#4a5568" opacity="0.7"/>
+    <rect x="380" y="412" width="46" height="32" rx="5" fill="#a55b5b" opacity="0.75"/>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>
