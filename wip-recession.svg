@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="A falling output path beside an hourglass splitting into diverging ageing trajectories">
+  <defs>
+    <linearGradient id="bgR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e7e4dd"/>
+    </linearGradient>
+    <linearGradient id="sandR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0bd6a"/>
+      <stop offset="1" stop-color="#c9a84c"/>
+    </linearGradient>
+    <linearGradient id="stepR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4a5568"/>
+      <stop offset="1" stop-color="#a55b5b"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bgR)"/>
+  <g fill="none" stroke="#9a9eb0" stroke-width="2" stroke-linecap="round">
+    <path d="M52 392 H440"/>
+    <path d="M52 392 V72"/>
+    <path d="M52 300 H440" stroke-dasharray="5 8" stroke-opacity="0.5"/>
+    <path d="M52 200 H440" stroke-dasharray="5 8" stroke-opacity="0.5"/>
+  </g>
+  <g fill="none" stroke="url(#stepR)" stroke-width="6" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M72 122 H150"/>
+    <path d="M150 122 V176"/>
+    <path d="M150 176 H228"/>
+    <path d="M228 176 V252"/>
+    <path d="M228 252 H306"/>
+    <path d="M306 252 V306"/>
+    <path d="M306 306 H396"/>
+  </g>
+  <g fill="#a55b5b">
+    <circle cx="150" cy="122" r="6"/>
+    <circle cx="228" cy="176" r="6"/>
+    <circle cx="306" cy="252" r="6"/>
+  </g>
+  <g>
+    <path d="M74 62 H186 L142 140 L186 218 H74 L118 140 Z" fill="#f6f4f0" stroke="#4a5568" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M118 140 L142 140" stroke="#4a5568" stroke-width="3"/>
+    <path d="M92 74 H168 L136 132 H124 Z" fill="url(#sandR)"/>
+    <path d="M116 148 H144 L146 196 H114 Z" fill="url(#sandR)" opacity="0.85"/>
+    <path d="M118 140 V228" stroke="#9a7d5a" stroke-width="3" stroke-dasharray="6 6" opacity="0.7"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M260 392 C284 352 298 300 306 254" stroke="#5b7fa5" stroke-width="5" stroke-dasharray="10 8"/>
+    <path d="M360 392 C356 344 344 300 330 268" stroke="#7c6da5" stroke-width="5" stroke-dasharray="10 8"/>
+  </g>
+  <g fill="#5b7fa5">
+    <circle cx="306" cy="254" r="8"/>
+  </g>
+  <g fill="#7c6da5">
+    <circle cx="330" cy="268" r="8"/>
+  </g>
+  <g fill="#9a9eb0" opacity="0.55">
+    <circle cx="392" cy="352" r="13"/>
+    <path d="M392 370 C378 370 372 380 372 392 V404 H412 V392 C412 380 406 370 392 370 Z"/>
+    <circle cx="428" cy="366" r="11"/>
+    <path d="M428 382 C416 382 410 390 410 400 V410 H446 V400 C446 390 440 382 428 382 Z"/>
+  </g>
+  <g fill="none" stroke="#c9a84c" stroke-width="2.6" stroke-dasharray="8 8" opacity="0.75">
+    <path d="M306 254 C318 240 322 232 330 268" />
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="An isolated child in a peer group beside diverging personality trait bars">
+  <defs>
+    <linearGradient id="bgBl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e8e4dd"/>
+    </linearGradient>
+    <linearGradient id="isoBl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a55b5b"/>
+      <stop offset="1" stop-color="#722f37"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bgBl)"/>
+  <g fill="#9a7d5a" opacity="0.75">
+    <circle cx="84" cy="150" r="19"/>
+    <path d="M84 176 C62 176 52 192 52 214 V268 H116 V214 C116 192 106 176 84 176 Z"/>
+    <circle cx="168" cy="150" r="19"/>
+    <path d="M168 176 C146 176 136 192 136 214 V268 H200 V214 C200 192 190 176 168 176 Z"/>
+    <circle cx="252" cy="150" r="19"/>
+    <path d="M252 176 C230 176 220 192 220 214 V268 H284 V214 C284 192 274 176 252 176 Z"/>
+  </g>
+  <g fill="url(#isoBl)">
+    <circle cx="352" cy="158" r="19"/>
+    <path d="M352 184 C330 184 320 200 320 222 V276 H384 V222 C384 200 374 184 352 184 Z"/>
+  </g>
+  <g fill="none" stroke="#9a9eb0" stroke-width="2" stroke-dasharray="8 8" opacity="0.8">
+    <circle cx="352" cy="212" r="74"/>
+  </g>
+  <g fill="none" stroke="#5b7fa5" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 8" opacity="0.85">
+    <path d="M296 150 C252 118 200 118 154 140"/>
+    <path d="M174 130 L152 140 L172 152"/>
+  </g>
+  <g fill="none" stroke="#a55b5b" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 8" opacity="0.85">
+    <path d="M296 190 C262 196 240 200 222 200"/>
+    <path d="M240 190 L220 200 L240 210"/>
+  </g>
+  <g stroke="#9a9eb0" stroke-width="2" fill="none">
+    <path d="M56 436 H424"/>
+    <path d="M56 300 V436"/>
+  </g>
+  <g fill="#4a5568" opacity="0.55">
+    <rect x="76" y="352" width="34" height="84" rx="4"/>
+    <rect x="176" y="330" width="34" height="106" rx="4"/>
+    <rect x="276" y="366" width="34" height="70" rx="4"/>
+    <rect x="376" y="386" width="34" height="50" rx="4"/>
+  </g>
+  <g fill="#a55b5b">
+    <rect x="76" y="322" width="34" height="30" rx="4" opacity="0.9"/>
+    <rect x="276" y="338" width="34" height="28" rx="4" opacity="0.75"/>
+  </g>
+  <g fill="#5b7fa5">
+    <rect x="176" y="310" width="34" height="20" rx="4" opacity="0.85"/>
+    <rect x="376" y="358" width="34" height="28" rx="4" opacity="0.6"/>
+  </g>
+  <path d="M56 300 H424" stroke="#c9a84c" stroke-width="2.4" stroke-dasharray="8 8" opacity="0.7"/>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

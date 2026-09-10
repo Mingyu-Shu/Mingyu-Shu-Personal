@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="Referral flows between primary clinics and a specialist hospital">
+  <defs>
+    <linearGradient id="bgTr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e8e6e0"/>
+    </linearGradient>
+    <linearGradient id="bigTr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f2ee"/>
+      <stop offset="1" stop-color="#dcd8d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bgTr)"/>
+  <g>
+    <path d="M92 190 H208 L188 152 H112 Z" fill="#9a7d5a" opacity="0.85"/>
+    <rect x="112" y="190" width="76" height="130" fill="url(#bigTr)" stroke="#4a5568" stroke-width="2.6"/>
+    <g fill="#5b7fa5" opacity="0.55">
+      <rect x="128" y="212" width="16" height="22" rx="2"/>
+      <rect x="158" y="212" width="16" height="22" rx="2"/>
+      <rect x="128" y="252" width="16" height="22" rx="2"/>
+      <rect x="158" y="252" width="16" height="22" rx="2"/>
+      <rect x="128" y="292" width="16" height="22" rx="2"/>
+      <rect x="158" y="292" width="16" height="22" rx="2"/>
+    </g>
+    <rect x="140" y="156" width="20" height="34" fill="#9a7d5a" opacity="0.6"/>
+    <g fill="#a55b5b">
+      <rect x="146" y="120" width="8" height="30" rx="2"/>
+      <rect x="135" y="131" width="30" height="8" rx="2"/>
+    </g>
+  </g>
+  <g>
+    <path d="M300 250 H404 L390 224 H314 Z" fill="#5a8f7a" opacity="0.85"/>
+    <rect x="314" y="250" width="76" height="70" fill="#f4f2ee" stroke="#4a5568" stroke-width="2.4"/>
+    <g fill="#5a8f7a" opacity="0.6">
+      <rect x="330" y="266" width="16" height="18" rx="2"/>
+      <rect x="358" y="266" width="16" height="18" rx="2"/>
+      <rect x="330" y="294" width="16" height="18" rx="2"/>
+      <rect x="358" y="294" width="16" height="18" rx="2"/>
+    </g>
+  </g>
+  <g>
+    <path d="M184 236 H304" stroke="#c9a84c" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M288 224 L306 236 L288 248"/>
+    <path d="M312 288 H192" stroke="#5b7fa5" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
+    <path d="M206 278 L188 288 L206 298"/>
+  </g>
+  <g fill="none" stroke="#9a9eb0" stroke-width="2.2" stroke-dasharray="9 8" opacity="0.65">
+    <path d="M48 340 H432"/>
+  </g>
+  <g>
+    <rect x="58" y="368" width="72" height="52" rx="8" fill="#f4f2ee" stroke="#5a8f7a" stroke-width="2.4"/>
+    <g fill="#a55b5b">
+      <rect x="90" y="382" width="8" height="26" rx="2"/>
+      <rect x="81" y="391" width="26" height="8" rx="2"/>
+    </g>
+    <rect x="200" y="368" width="72" height="52" rx="8" fill="#f4f2ee" stroke="#5a8f7a" stroke-width="2.4"/>
+    <g fill="#a55b5b">
+      <rect x="232" y="382" width="8" height="26" rx="2"/>
+      <rect x="223" y="391" width="26" height="8" rx="2"/>
+    </g>
+    <rect x="342" y="368" width="72" height="52" rx="8" fill="#f4f2ee" stroke="#5a8f7a" stroke-width="2.4"/>
+    <g fill="#a55b5b">
+      <rect x="374" y="382" width="8" height="26" rx="2"/>
+      <rect x="365" y="391" width="26" height="8" rx="2"/>
+    </g>
+  </g>
+  <g stroke="#9a9eb0" stroke-width="1.8" stroke-dasharray="5 6" opacity="0.6" fill="none">
+    <path d="M94 368 V348"/>
+    <path d="M236 368 V348"/>
+    <path d="M378 368 V348"/>
+  </g>
+  <g fill="#c9a84c">
+    <circle cx="94" cy="342" r="5"/>
+    <circle cx="236" cy="342" r="5"/>
+    <circle cx="378" cy="342" r="5"/>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>

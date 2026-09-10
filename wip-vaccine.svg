@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="A syringe beside a DNA helix and a protective shield">
+  <defs>
+    <linearGradient id="bgV" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f7"/>
+      <stop offset="1" stop-color="#e7e5de"/>
+    </linearGradient>
+    <linearGradient id="helixA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a55b5b"/>
+      <stop offset="1" stop-color="#722f37"/>
+    </linearGradient>
+    <linearGradient id="helixB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fa8c9"/>
+      <stop offset="1" stop-color="#5b7fa5"/>
+    </linearGradient>
+    <linearGradient id="shV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0bd6a"/>
+      <stop offset="1" stop-color="#9a7d5a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" fill="url(#bgV)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M96 92 C164 148 164 236 96 292 C164 348 164 372 96 420" stroke="url(#helixA)" stroke-width="9"/>
+    <path d="M232 92 C164 148 164 236 232 292 C164 348 164 372 232 420" stroke="url(#helixB)" stroke-width="9"/>
+    <g stroke="#c9a84c" stroke-width="5" opacity="0.85">
+      <path d="M116 124 H212"/>
+      <path d="M130 176 H198"/>
+      <path d="M116 236 H212"/>
+      <path d="M130 288 H198"/>
+      <path d="M120 350 H208"/>
+      <path d="M124 400 H204"/>
+    </g>
+  </g>
+  <g>
+    <path d="M300 84 L400 84 L400 120 L348 120 L348 300 L332 336 L316 300 L316 120 L300 120 Z" fill="#f6f4ef" stroke="#4a5568" stroke-width="3"/>
+    <rect x="308" y="40" width="84" height="44" rx="8" fill="#5a8f7a" opacity="0.9"/>
+    <path d="M300 120 H400" stroke="#9a9eb0" stroke-width="2"/>
+    <g stroke="#5b7fa5" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M348 40 V12"/>
+      <path d="M348 12 L336 26"/>
+      <path d="M348 12 L360 26"/>
+    </g>
+    <g fill="#5b7fa5">
+      <rect x="318" y="150" width="18" height="10" rx="3"/>
+      <rect x="364" y="186" width="18" height="10" rx="3"/>
+      <rect x="318" y="222" width="18" height="10" rx="3"/>
+      <rect x="364" y="258" width="18" height="10" rx="3"/>
+    </g>
+    <g fill="#5a8f7a" opacity="0.8">
+      <circle cx="332" cy="366" r="6"/>
+      <circle cx="348" cy="382" r="6"/>
+      <circle cx="332" cy="396" r="5"/>
+    </g>
+  </g>
+  <g>
+    <path d="M240 440 L300 458 C300 486 284 504 262 514 C240 504 224 486 224 458 Z" fill="url(#shV)"/>
+  </g>
+  <g fill="none" stroke="#a55b5b" stroke-width="2.6" stroke-dasharray="7 7" opacity="0.8">
+    <circle cx="262" cy="470" r="24"/>
+  </g>
+  <rect x="16" y="16" width="448" height="448" fill="none" stroke="#c9a84c" stroke-width="1.6" stroke-opacity="0.7"/>
+</svg>
