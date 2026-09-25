@@ -162,11 +162,13 @@
         .badge.review{background:rgba(124,109,165,0.1);color:var(--violet);border:1px solid rgba(124,109,165,0.3)}
         .badge.sub{background:rgba(90,143,122,0.1);color:var(--teal);border:1px solid rgba(90,143,122,0.3)}
         .badge.wip{background:rgba(74,85,104,0.08);color:var(--ink);border:1px solid rgba(74,85,104,0.22)}
-        .badge.presented{background:rgba(184,134,11,0.1);color:var(--amber);border:1px solid rgba(184,134,11,0.3)}
+        .badge.presented{position:relative;display:inline-block;padding:0 0 0 15px;background:none;border:0;border-radius:0;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:0.92rem;font-weight:600;font-style:italic;letter-spacing:0.012em;text-transform:none;white-space:normal;line-height:1.5;color:var(--amber)}
+                .badge.presented::before{content:'';position:absolute;left:1px;top:0.72em;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:0.45}
         .badge-venue{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:0.72rem;font-weight:700;font-style:italic;text-transform:none;letter-spacing:0.01em;color:var(--text-dark)}
         .paper-title{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:600;color:var(--text-dark);line-height:1.35;margin-bottom:5px}
         .paper-authors{font-size:0.74rem;color:var(--text-faint);font-style:italic;margin-bottom:10px}
-                .paper-presented{font-size:0.72rem;color:var(--amber);font-weight:500;margin-bottom:10px}
+                .paper-presented{position:relative;padding-left:15px;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:0.92rem;font-weight:600;font-style:italic;letter-spacing:0.012em;line-height:1.5;color:var(--amber);margin-bottom:10px}
+                        .paper-presented::before{content:'';position:absolute;left:1px;top:0.72em;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:0.45}
         .paper-abs{font-size:0.82rem;color:var(--text-muted);line-height:1.65}
         .abs-toggle{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:4px 13px;border-radius:100px;border:1px solid rgba(201,168,76,0.4);background:rgba(201,168,76,0.08);color:#8a6d1f;font-size:0.64rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:0.3s var(--ease)}
         .abs-toggle:hover{background:rgba(201,168,76,0.16);border-color:rgba(201,168,76,0.6)}
@@ -191,8 +193,8 @@
         .wip-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--text-dark);line-height:1.4;margin-bottom:6px}
         .wip-title .cn{font-size:0.82rem;color:var(--text-faint);font-weight:400}
         .wip-authors{font-size:0.73rem;color:var(--text-faint);font-style:italic;margin-bottom:2px}
-        .wip-presented{margin-top:8px}
-                .wip-links{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+        .wip-presented{margin-top:10px}
+                .wip-links{margin-top:12px;display:flex;gap:8px 26px;flex-wrap:wrap;align-items:baseline}
         .pubs-note{font-size:0.8rem;color:var(--text-muted);line-height:1.65;margin:16px 0 20px;padding:14px 18px;background:var(--bg-warm);border-left:3px solid var(--accent);border-radius:0 8px 8px 0}
                 .pubs-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
                 .pub-row{display:flex;gap:16px;align-items:center;padding:12px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;transition:0.3s var(--ease)}
@@ -249,14 +251,17 @@
         .pg-chapter-num{font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:500;color:var(--teal);background:rgba(90,143,122,0.08);padding:2px 8px;border-radius:4px}
         .pg-chapter-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--text-dark)}
         .pg-chapter-desc{font-size:0.8rem;color:var(--text-muted);line-height:1.6;margin-bottom:12px}
-        .pg-dl-row{display:flex;gap:10px;flex-wrap:wrap}
-        .pg-dl-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:6px;font-size:0.78rem;font-weight:500;text-decoration:none;transition:0.3s var(--ease);border:1px solid var(--border)}
-        .pg-dl-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
-        .pg-dl-btn.cn{background:rgba(90,143,122,0.06);color:var(--teal);border-color:rgba(90,143,122,0.2)}
-        .pg-dl-btn.cn:hover{background:rgba(90,143,122,0.12);border-color:var(--teal)}
-        .pg-dl-btn.en{background:rgba(91,127,165,0.06);color:var(--blue);border-color:rgba(91,127,165,0.2)}
-        .pg-dl-btn.en:hover{background:rgba(91,127,165,0.12);border-color:var(--blue)}
-        .pg-dl-icon{font-size:0.85rem}
+        .pg-dl-row{display:flex;gap:8px 26px;flex-wrap:wrap;align-items:baseline}
+        .pg-dl-btn{position:relative;display:inline-flex;align-items:baseline;gap:5px;padding:0;font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:0.95rem;font-weight:600;font-style:italic;letter-spacing:0.015em;line-height:1.15;text-decoration:none;transition:color 0.3s var(--ease)}
+                .pg-dl-btn::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:1px;background:currentColor;opacity:0.25;transform:scaleX(0.45);transform-origin:left center;transition:transform 0.45s var(--ease),opacity 0.45s var(--ease)}
+                .pg-dl-btn:hover::after{opacity:0.8;transform:scaleX(1)}
+        .pg-dl-btn:hover .pg-dl-icon{opacity:1;transform:translateY(1px)}
+        .pg-dl-btn.cn{color:var(--teal)}
+        .pg-dl-btn.cn:hover{color:#3d6b58}
+        .pg-dl-btn.en{color:var(--blue)}
+        .pg-dl-btn.en:hover{color:#3a5f8a}
+        .pg-dl-icon{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-style:normal;font-size:0.66rem;font-weight:500;line-height:1;opacity:0.5;transition:opacity 0.3s var(--ease),transform 0.3s var(--ease)}
+                .pg-dl-icon:empty{display:none}
         .pg-empirical{display:flex;flex-direction:column;gap:12px}
         .pg-emp-item{padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);position:relative;overflow:hidden}
         .pg-emp-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--ink)}
