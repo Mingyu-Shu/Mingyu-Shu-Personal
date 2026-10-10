@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root{--primary:#1a1d24;--primary-light:#2a2d35;--accent:#9a7d5a;--accent-light:#c4a97a;--blue:#5b7fa5;--violet:#7c6da5;--rose:#a55b5b;--teal:#5a8f7a;--ink:#4a5568;--amber:#b8860b;--wine:#722f37;--gold:#c9a84c;--text-dark:#1a1d24;--text-body:#3d4250;--text-muted:#6b7080;--text-faint:#9a9eb0;--bg:#faf9f7;--bg-card:#ffffff;--bg-warm:#f4f2ee;--border:#e5e2dc;--shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.03);--shadow-hover:0 4px 16px rgba(0,0,0,0.06),0 8px 24px rgba(0,0,0,0.04);--radius:10px;--radius-lg:16px;--ease:cubic-bezier(0.4,0,0.2,1)}
+        :root{--primary:#23262d;--primary-light:#2f333b;--accent:#8a6d4b;--accent-light:#b39a76;--blue:#5f7d97;--violet:#7a7391;--rose:#9c7373;--teal:#6d8a7e;--ink:#4c5561;--amber:#9a7f45;--wine:#7a555b;--gold:#b0925a;--text-dark:#22252c;--text-body:#3f434d;--text-muted:#6d727d;--text-faint:#a2a6b0;--bg:#fbfaf8;--bg-card:#ffffff;--bg-warm:#f5f3ef;--border:#e8e5df;--shadow:0 1px 2px rgba(30,32,40,0.04);--shadow-hover:0 3px 12px rgba(30,32,40,0.06);--radius:6px;--radius-lg:10px;--ease:cubic-bezier(0.4,0,0.2,1)}
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;scroll-padding-top:84px}
         body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text-body);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -396,6 +396,52 @@
         .page-crumb a{color:var(--accent);text-decoration:none}
         .page-crumb a:hover{text-decoration:underline}
         @media(max-width:600px){.page-header{padding:96px 0 32px}}
+
+        /* ===== Koh editorial layer ===== */
+        .hero{min-height:0;padding:120px 0 84px;background:var(--bg)}
+        .hero::before,.hero::after{display:none}
+        .hero-content{gap:48px;justify-content:flex-start;text-align:left}
+        .hero-name,.hero-fields,.hero-photo-wrap{animation:none;opacity:1}
+        .hero-name{font-size:clamp(2.4rem,4.4vw,3.4rem)}
+        .hero-photo{border:0;border-radius:3px;box-shadow:0 10px 26px rgba(30,32,40,0.10);width:200px;height:250px}
+        .scroll-hint{display:none}
+        .page-header{background:var(--bg);border-bottom:1px solid var(--border);padding:104px 0 30px}
+        .page-header::before{display:none}
+        .hero-field,.hero-field:hover{color:var(--ink)}
+        .section{padding:72px 0}
+        .section-label,.page-crumb{color:var(--accent)}
+        .reveal{transform:translateY(10px)}
+        /* remove every decorative colored bar, dot, glow */
+        .field-card::before,.news-item::before,.media-item::before,.paper-card::before,.wip-item::before,.pg-chapter::before,.pg-emp-item::before,.go-card::before,.coffee-card::before,.culture-card::before,.music-card::before,.explore-card::before,.sel-paper::before,.sel-paper::after,.paper-part-head::after{display:none!important}
+        .paper-section-dot,.paper-part-dot{background:var(--text-faint)!important}
+        /* flatten text-based cards into airy borderless rows */
+        .sel-paper,.paper-card,.wip-item,.news-item,.field-card,.about-card,.explore-card,.pub-row,.pubs-card,.contact-link,.fan-story{background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important}
+        .sel-paper:hover,.paper-card:hover,.wip-item:hover,.news-item:hover,.field-card:hover,.about-card:hover,.explore-card:hover,.pub-row:hover,.pubs-card:hover,.contact-link:hover,.fan-story:hover,.media-item:hover,.coffee-card:hover,.culture-card:hover,.music-card:hover,.go-card:hover,.about-card:hover,.pg-book:hover{box-shadow:none!important;transform:none!important}
+        .paper-stack,.wip-grid{gap:0!important}
+        .paper-card,.wip-item,.sel-paper{padding:26px 0!important;border-bottom:1px solid var(--border)!important;border-radius:0!important}
+        .paper-card:last-child,.wip-item:last-child,.sel-paper:last-child{border-bottom:0!important}
+        /* small, consistent stamp thumbnails that sit with the prose */
+        .paper-thumb,.wip-thumb{width:68px!important;height:68px!important;border-radius:2px!important;overflow:hidden!important;border:1px solid var(--border)!important;box-shadow:none!important;flex-shrink:0}
+        .paper-thumb img,.wip-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+        .sel-cover{width:96px!important;border-radius:2px!important;border:1px solid var(--border)!important;box-shadow:none!important}
+        /* keep prose to a readable column (Koh measure) */
+        .paper-main,.wip-main,.sel-body{max-width:780px}
+        .abs-body,.paper-abs{max-width:720px}
+        /* monochrome the badges, tags, links: one accent + neutral greys */
+        .badge.abs2,.badge.rr,.badge.review,.badge.sub,.badge.wip,.badge.presented,.jif,.casq,.sel-label,.paper-presented{color:var(--text-muted)!important}
+        .research-tag{color:var(--accent)!important}
+        .badge-venue{color:var(--text-dark)!important}
+        .paper-title,.wip-title{color:var(--text-dark);font-size:1.18rem!important}
+        .sel-title{color:var(--text-dark);font-size:1.32rem!important}
+        .paper-authors,.pub-authors{color:var(--text-muted)!important;font-size:0.8rem!important}
+        .abs-toggle,.abs-toggle:hover{color:var(--text-muted)!important}
+        .co-author,a.co-author:hover,.pub-doi,.pub-doi:hover{color:var(--accent)!important;text-decoration-color:rgba(138,109,75,0.4)!important}
+        /* footer light */
+        .footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
+        .footer p{color:var(--text-faint)}
+        .footer a{color:var(--text-muted)}
+        .footer a:hover{color:var(--accent)}
+        .explore-icon{opacity:.8}
     </style>
 </head>
 <body>
@@ -412,7 +458,7 @@
         <div class="media-item dy reveal"><div class="media-icon dy">&#9654;</div><div class="media-body"><div class="media-type">Douyin Video · Aug 2026</div><div class="media-title">Fertility Policy: A New Stanford–NBER Study</div><div class="media-desc">A five-minute video summarizing a new study on fertility policy from NBER-affiliated Stanford research. Original title: "NBER斯坦福新研究：生育政策".</div><a class="media-link" href="https://www.douyin.com/video/7673888659606699145" target="_blank" rel="noopener">Watch on Douyin &#8594;</a></div></div>
         <div class="media-item dy reveal"><div class="media-icon dy">&#9654;</div><div class="media-body"><div class="media-type">Douyin Video · Aug 2026</div><div class="media-title">The Salt War: An Economic History Paper from a Top Journal</div><div class="media-desc">A five-minute video sharing a top-journal economic history paper on the "Salt War". Original title: "经济学顶刊论文分享：经济史salt war".</div><a class="media-link" href="https://www.douyin.com/video/7673605720818852977" target="_blank" rel="noopener">Watch on Douyin &#8594;</a></div></div>
         <a class="pubs-card reveal" href="https://www.douyin.com/user/MS4wLjABAAAAN4LjGFQtijQ06f81EWHpg4lza7ANCizbnefki5a-865fiOevb8qsfDybHeMsFaWg" target="_blank" rel="noopener"><div class="pubs-icon">D</div><div class="pubs-info"><div class="pubs-title">MO.Shu's Blog (Read &amp; Reflect) — Douyin Channel</div><div class="pubs-desc">Weekly paper-explainer videos generated by an automated DeepSeek workflow. Current channel: 3 videos on econometrics and genetics, fertility policy, and economic history. Chinese name: MO.Shu的博客（边读边想）.</div></div><span class="pubs-arrow">→</span></a>
-        </div></div></section><footer class="footer"><div class="container"><p>&copy; 2026 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer><button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button><div class="e-pet" id="petNailong" style="width:100px;height:93px;bottom:20px;right:120px;"><span class="e-pet-name">Nailong</span><div class="e-pet-bubble" id="bubbleNailong"></div><img src="pet-nailong.png" alt="Nailong"></div><script>
+        </div></div></section><footer class="footer"><div class="container"><p>&copy; 2026 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer><button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button><script>
 (function(){
     var nav=document.getElementById('nav'),navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks'),backTop=document.getElementById('backTop');
     function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60);backTop.classList.toggle('show',window.scrollY>500)}
@@ -424,25 +470,7 @@
     var reveals=document.querySelectorAll('.reveal'),observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
     reveals.forEach(function(el){observer.observe(el)});
 })();
-(function(){
-    var nailong=document.getElementById('petNailong');
-    var bubbleN=document.getElementById('bubbleNailong');
-    if(!nailong)return;
-    var msgs=['Scroll down to see my research!','Reading papers is my hobby~','Economics is fun, right?','Drag me anywhere you like!','Nailong approves of this page!','Which paper should I read next?','Hmm... an interesting graph!','Keep going, friend!'];
-    function showBubble(el,msg,dur){el.textContent=msg;el.classList.add('show');clearTimeout(el._tid);el._tid=setTimeout(function(){el.classList.remove('show')},dur||3000)}
-    function hop(){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
-    var lastActive=Date.now();
-    function activity(){lastActive=Date.now()}
-    nailong.addEventListener('click',function(){activity();showBubble(bubbleN,msgs[Math.floor(Math.random()*msgs.length)],3000);hop()});
-    var hoverShown=0;
-    nailong.addEventListener('mouseenter',function(){activity();var now=Date.now();if(now-hoverShown>6000){hoverShown=now;showBubble(bubbleN,'Hi! I am Nailong. Click or drag me~',2500)}});
-    var dragging=false,offX=0,offY=0;
-    nailong.addEventListener('mousedown',function(e){activity();var r=nailong.getBoundingClientRect();nailong.style.left=r.left+'px';nailong.style.top=r.top+'px';nailong.style.bottom='auto';nailong.style.right='auto';offX=e.clientX-r.left;offY=e.clientY-r.top;dragging=true;nailong.classList.add('dragging');e.preventDefault()});
-    document.addEventListener('mousemove',function(e){if(!dragging)return;var x=e.clientX-offX,y=e.clientY-offY;x=Math.max(0,Math.min(window.innerWidth-nailong.offsetWidth,x));y=Math.max(0,Math.min(window.innerHeight-nailong.offsetHeight,y));nailong.style.left=x+'px';nailong.style.top=y+'px'});
-    document.addEventListener('mouseup',function(){if(!dragging)return;dragging=false;nailong.classList.remove('dragging');showBubble(bubbleN,'Thanks for moving me!',2000)});
-    setInterval(function(){if(Date.now()-lastActive>60000)showBubble(bubbleN,'Zzz...',2500)},60000);
-    setTimeout(function(){showBubble(bubbleN,'Welcome! I am Nailong, your corner buddy.',4000)},2500);
-})();
+/* pet widget removed in refined redesign */
 </script>
 </body>
 </html>

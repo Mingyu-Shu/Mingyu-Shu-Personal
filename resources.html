@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root{--primary:#1a1d24;--primary-light:#2a2d35;--accent:#9a7d5a;--accent-light:#c4a97a;--blue:#5b7fa5;--violet:#7c6da5;--rose:#a55b5b;--teal:#5a8f7a;--ink:#4a5568;--amber:#b8860b;--wine:#722f37;--gold:#c9a84c;--text-dark:#1a1d24;--text-body:#3d4250;--text-muted:#6b7080;--text-faint:#9a9eb0;--bg:#faf9f7;--bg-card:#ffffff;--bg-warm:#f4f2ee;--border:#e5e2dc;--shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.03);--shadow-hover:0 4px 16px rgba(0,0,0,0.06),0 8px 24px rgba(0,0,0,0.04);--radius:10px;--radius-lg:16px;--ease:cubic-bezier(0.4,0,0.2,1)}
+        :root{--primary:#23262d;--primary-light:#2f333b;--accent:#8a6d4b;--accent-light:#b39a76;--blue:#5f7d97;--violet:#7a7391;--rose:#9c7373;--teal:#6d8a7e;--ink:#4c5561;--amber:#9a7f45;--wine:#7a555b;--gold:#b0925a;--text-dark:#22252c;--text-body:#3f434d;--text-muted:#6d727d;--text-faint:#a2a6b0;--bg:#fbfaf8;--bg-card:#ffffff;--bg-warm:#f5f3ef;--border:#e8e5df;--shadow:0 1px 2px rgba(30,32,40,0.04);--shadow-hover:0 3px 12px rgba(30,32,40,0.06);--radius:6px;--radius-lg:10px;--ease:cubic-bezier(0.4,0,0.2,1)}
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;scroll-padding-top:84px}
         body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text-body);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -396,6 +396,55 @@
         .page-crumb a{color:var(--accent);text-decoration:none}
         .page-crumb a:hover{text-decoration:underline}
         @media(max-width:600px){.page-header{padding:96px 0 32px}}
+
+        /* ===== Koh editorial layer ===== */
+        .hero{min-height:0;padding:120px 0 84px;background:var(--bg)}
+        .hero::before,.hero::after{display:none}
+        .hero-content{gap:48px;justify-content:flex-start;text-align:left}
+        .hero-name,.hero-fields,.hero-photo-wrap{animation:none;opacity:1}
+        .hero-name{font-size:clamp(2.4rem,4.4vw,3.4rem)}
+        .hero-photo{border:0;border-radius:3px;box-shadow:0 10px 26px rgba(30,32,40,0.10);width:200px;height:250px}
+        .scroll-hint{display:none}
+        .page-header{background:var(--bg);border-bottom:1px solid var(--border);padding:104px 0 30px}
+        .page-header::before{display:none}
+        .hero-field,.hero-field:hover{color:var(--ink)}
+        .section{padding:72px 0}
+        .section-label,.page-crumb{color:var(--accent)}
+        .reveal{transform:translateY(10px)}
+        /* remove every decorative colored bar, dot, glow */
+        .field-card::before,.news-item::before,.media-item::before,.paper-card::before,.wip-item::before,.pg-chapter::before,.pg-emp-item::before,.go-card::before,.coffee-card::before,.culture-card::before,.music-card::before,.explore-card::before,.sel-paper::before,.sel-paper::after,.paper-part-head::after{display:none!important}
+        .paper-section-dot,.paper-part-dot{background:var(--text-faint)!important}
+        /* flatten text-based cards into airy borderless rows */
+        .sel-paper,.paper-card,.wip-item,.news-item,.field-card,.about-card,.explore-card,.pub-row,.pubs-card,.contact-link,.fan-story{background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important}
+        .sel-paper:hover,.paper-card:hover,.wip-item:hover,.news-item:hover,.field-card:hover,.about-card:hover,.explore-card:hover,.pub-row:hover,.pubs-card:hover,.contact-link:hover,.fan-story:hover,.media-item:hover,.coffee-card:hover,.culture-card:hover,.music-card:hover,.go-card:hover,.about-card:hover,.pg-book:hover{box-shadow:none!important;transform:none!important}
+        .paper-stack,.wip-grid{gap:0!important}
+        .paper-card,.wip-item,.sel-paper{padding:26px 0!important;border-bottom:1px solid var(--border)!important;border-radius:0!important}
+        .paper-card:last-child,.wip-item:last-child,.sel-paper:last-child{border-bottom:0!important}
+        /* small, consistent stamp thumbnails that sit with the prose */
+        .paper-thumb,.wip-thumb{width:68px!important;height:68px!important;border-radius:2px!important;overflow:hidden!important;border:1px solid var(--border)!important;box-shadow:none!important;flex-shrink:0}
+        .paper-thumb img,.wip-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+        .sel-cover{width:96px!important;border-radius:2px!important;border:1px solid var(--border)!important;box-shadow:none!important}
+        /* keep prose to a readable column (Koh measure) */
+        .paper-main,.wip-main,.sel-body{max-width:780px}
+        .abs-body,.paper-abs{max-width:720px}
+        /* monochrome the badges, tags, links: one accent + neutral greys */
+        .badge.abs2,.badge.rr,.badge.review,.badge.sub,.badge.wip,.badge.presented,.jif,.casq,.sel-label,.paper-presented{color:var(--text-muted)!important}
+        .research-tag{color:var(--accent)!important}
+        .badge-venue{color:var(--text-dark)!important}
+        .paper-title,.wip-title{color:var(--text-dark);font-size:1.18rem!important}
+        .sel-title{color:var(--text-dark);font-size:1.32rem!important}
+        .paper-authors,.pub-authors{color:var(--text-muted)!important;font-size:0.8rem!important}
+        .abs-toggle,.abs-toggle:hover{color:var(--text-muted)!important}
+        .co-author,a.co-author:hover,.pub-doi,.pub-doi:hover{color:var(--accent)!important;text-decoration-color:rgba(138,109,75,0.4)!important}
+        /* footer light */
+        .footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
+        .footer p{color:var(--text-faint)}
+        .footer a{color:var(--text-muted)}
+        .footer a:hover{color:var(--accent)}
+        .explore-icon{opacity:.8}
+        /* single-accent cleanup for remaining decorative dots & labels */
+        .life-sub-dot,.pg-sub-dot{background:var(--accent)!important}
+        .culture-card .culture-card-tag{color:var(--accent)!important}
     </style>
 </head>
 <body>
@@ -424,7 +473,7 @@
         <div style="margin-top:24px;" class="reveal"><div class="pg-sub-painting"><img src="jfe-cover.jpg" alt="Journal of Financial Economics" class="pg-sub-painting-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="pg-sub-painting-fallback" style="display:none;background:linear-gradient(135deg,#1a3a5c 0%,#0d2137 100%);color:#e8e4dc;">Journal of Financial Economics — Elsevier</div><div class="pg-sub-painting-caption"><div class="pg-sub-painting-title">Journal of Financial Economics (JFE)</div><div class="pg-sub-painting-artist">Elsevier. ISSN: 0304-405X. One of the top three journals in finance.</div><div class="pg-sub-painting-desc">JFE publishes leading research in financial economics — from asset pricing and corporate finance to market microstructure and behavioral finance. These reading lists survey the frontier of what we know, and what we still need to learn.</div></div></div><div class="pg-empirical"><div class="pg-emp-item"><div class="pg-emp-head"><span class="pg-emp-num">JFE</span><span class="pg-emp-title">Journal of Financial Economics — Survey Reading Lists</span></div><div class="pg-emp-desc">Curated reading lists across JFE's major areas: asset pricing, corporate finance, banking, fintech, ESG, household finance, and more. I am working through these surveys to understand the landscape of modern finance research.</div><div class="pg-dl-row"><a href="JFE_Survey_PDFs/JFE_Asset_Pricing_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Asset Pricing CN</a><a href="JFE_Survey_PDFs/JFE_Asset_Pricing_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Asset Pricing EN</a><a href="JFE_Survey_PDFs/JFE_Capital_Structure_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Capital Structure CN</a><a href="JFE_Survey_PDFs/JFE_Capital_Structure_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Capital Structure EN</a></div><div class="pg-dl-row"><a href="JFE_Survey_PDFs/JFE_Banking_Intermediation_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Banking CN</a><a href="JFE_Survey_PDFs/JFE_Banking_Intermediation_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Banking EN</a><a href="JFE_Survey_PDFs/JFE_Corporate_Governance_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Governance CN</a><a href="JFE_Survey_PDFs/JFE_Corporate_Governance_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Governance EN</a></div><div class="pg-dl-row"><a href="JFE_Survey_PDFs/JFE_MA_Restructuring_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> M&amp;A CN</a><a href="JFE_Survey_PDFs/JFE_MA_Restructuring_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> M&amp;A EN</a><a href="JFE_Survey_PDFs/JFE_VC_Innovation_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> VC CN</a><a href="JFE_Survey_PDFs/JFE_VC_Innovation_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> VC EN</a></div><div class="pg-dl-row"><a href="JFE_Survey_PDFs/JFE_Household_Finance_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Household CN</a><a href="JFE_Survey_PDFs/JFE_Household_Finance_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Household EN</a><a href="JFE_Survey_PDFs/JFE_International_Finance_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> International CN</a><a href="JFE_Survey_PDFs/JFE_International_Finance_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> International EN</a></div><div class="pg-dl-row"><a href="JFE_Survey_PDFs/JFE_Macro_Finance_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Macro CN</a><a href="JFE_Survey_PDFs/JFE_Macro_Finance_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Macro EN</a><a href="JFE_Survey_PDFs/JFE_Fintech_Crypto_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Fintech CN</a><a href="JFE_Survey_PDFs/JFE_Fintech_Crypto_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Fintech EN</a></div><div class="pg-dl-row"><a href="JFE_Survey_PDFs/JFE_AI_ML_Finance_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> AI/ML CN</a><a href="JFE_Survey_PDFs/JFE_AI_ML_Finance_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> AI/ML EN</a><a href="JFE_Survey_PDFs/JFE_ESG_Sustainable_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> ESG CN</a><a href="JFE_Survey_PDFs/JFE_ESG_Sustainable_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> ESG EN</a></div></div></div></div>
         <div style="margin-top:24px;" class="reveal"><div class="pg-sub-painting"><img src="caravaggio-musicians.jpg" alt="Financial Management Journal" class="pg-sub-painting-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="pg-sub-painting-fallback" style="display:none;background:linear-gradient(135deg,#8B0000 0%,#4a0000 100%);color:#e8e4dc;">Journal of Financial Management — Wiley</div><div class="pg-sub-painting-caption"><div class="pg-sub-painting-title">Journal of Financial Management (JFM)</div><div class="pg-sub-painting-artist">Wiley. ISSN: 1755-053X. A leading journal in financial management and futures markets.</div><div class="pg-sub-painting-desc">JFM publishes research on financial management, derivatives, futures markets, and risk management. These reading lists survey recent developments in commodity futures, volatility forecasting, options pricing, and the growing intersection of machine learning with financial markets.</div></div></div><div class="pg-empirical"><div class="pg-emp-item"><div class="pg-emp-head"><span class="pg-emp-num">JFM</span><span class="pg-emp-title">Journal of Financial Management — Survey Reading Lists</span></div><div class="pg-emp-desc">Curated reading lists across JFM's major areas: commodity futures, volatility forecasting, options pricing, machine learning in futures markets, cryptocurrency and digital assets, and future directions in financial management. I am exploring these surveys to understand the frontier of financial management research.</div><div class="pg-dl-row"><a href="JFM_Survey_PDFs/JFM_Summary_Future_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Future CN</a><a href="JFM_Survey_PDFs/JFM_Summary_Future_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Future EN</a><a href="JFM_Survey_PDFs/JFM_Volatility_Forecasting_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Volatility CN</a><a href="JFM_Survey_PDFs/JFM_Volatility_Forecasting_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Volatility EN</a></div><div class="pg-dl-row"><a href="JFM_Survey_PDFs/JFM_Options_Pricing_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Options CN</a><a href="JFM_Survey_PDFs/JFM_Options_Pricing_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Options EN</a><a href="JFM_Survey_PDFs/JFM_ML_Futures_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> ML CN</a><a href="JFM_Survey_PDFs/JFM_ML_Futures_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> ML EN</a></div><div class="pg-dl-row"><a href="JFM_Survey_PDFs/JFM_Crypto_Digital_CN.pdf" class="pg-dl-btn cn"><span class="pg-dl-icon">↓</span> Crypto CN</a><a href="JFM_Survey_PDFs/JFM_Crypto_Digital_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Crypto EN</a><a href="JFM_Survey_PDFs/JFM_Commodity_Futures_EN.pdf" class="pg-dl-btn en"><span class="pg-dl-icon">↓</span> Commodity EN</a></div></div></div></div>
         </div>
-        </div></div></section><footer class="footer"><div class="container"><p>&copy; 2026 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer><button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button><div class="e-pet" id="petNailong" style="width:100px;height:93px;bottom:20px;right:120px;"><span class="e-pet-name">Nailong</span><div class="e-pet-bubble" id="bubbleNailong"></div><img src="pet-nailong.png" alt="Nailong"></div><script>
+        </div></div></section><footer class="footer"><div class="container"><p>&copy; 2026 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer><button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button><script>
 (function(){
     var nav=document.getElementById('nav'),navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks'),backTop=document.getElementById('backTop');
     function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60);backTop.classList.toggle('show',window.scrollY>500)}
@@ -436,25 +485,7 @@
     var reveals=document.querySelectorAll('.reveal'),observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
     reveals.forEach(function(el){observer.observe(el)});
 })();
-(function(){
-    var nailong=document.getElementById('petNailong');
-    var bubbleN=document.getElementById('bubbleNailong');
-    if(!nailong)return;
-    var msgs=['Scroll down to see my research!','Reading papers is my hobby~','Economics is fun, right?','Drag me anywhere you like!','Nailong approves of this page!','Which paper should I read next?','Hmm... an interesting graph!','Keep going, friend!'];
-    function showBubble(el,msg,dur){el.textContent=msg;el.classList.add('show');clearTimeout(el._tid);el._tid=setTimeout(function(){el.classList.remove('show')},dur||3000)}
-    function hop(){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
-    var lastActive=Date.now();
-    function activity(){lastActive=Date.now()}
-    nailong.addEventListener('click',function(){activity();showBubble(bubbleN,msgs[Math.floor(Math.random()*msgs.length)],3000);hop()});
-    var hoverShown=0;
-    nailong.addEventListener('mouseenter',function(){activity();var now=Date.now();if(now-hoverShown>6000){hoverShown=now;showBubble(bubbleN,'Hi! I am Nailong. Click or drag me~',2500)}});
-    var dragging=false,offX=0,offY=0;
-    nailong.addEventListener('mousedown',function(e){activity();var r=nailong.getBoundingClientRect();nailong.style.left=r.left+'px';nailong.style.top=r.top+'px';nailong.style.bottom='auto';nailong.style.right='auto';offX=e.clientX-r.left;offY=e.clientY-r.top;dragging=true;nailong.classList.add('dragging');e.preventDefault()});
-    document.addEventListener('mousemove',function(e){if(!dragging)return;var x=e.clientX-offX,y=e.clientY-offY;x=Math.max(0,Math.min(window.innerWidth-nailong.offsetWidth,x));y=Math.max(0,Math.min(window.innerHeight-nailong.offsetHeight,y));nailong.style.left=x+'px';nailong.style.top=y+'px'});
-    document.addEventListener('mouseup',function(){if(!dragging)return;dragging=false;nailong.classList.remove('dragging');showBubble(bubbleN,'Thanks for moving me!',2000)});
-    setInterval(function(){if(Date.now()-lastActive>60000)showBubble(bubbleN,'Zzz...',2500)},60000);
-    setTimeout(function(){showBubble(bubbleN,'Welcome! I am Nailong, your corner buddy.',4000)},2500);
-})();
+/* pet widget removed in refined redesign */
 </script>
 </body>
 </html>
