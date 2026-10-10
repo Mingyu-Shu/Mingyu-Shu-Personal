@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root{--primary:#1a1d24;--primary-light:#2a2d35;--accent:#9a7d5a;--accent-light:#c4a97a;--blue:#5b7fa5;--violet:#7c6da5;--rose:#a55b5b;--teal:#5a8f7a;--ink:#4a5568;--amber:#b8860b;--wine:#722f37;--gold:#c9a84c;--text-dark:#1a1d24;--text-body:#3d4250;--text-muted:#6b7080;--text-faint:#9a9eb0;--bg:#faf9f7;--bg-card:#ffffff;--bg-warm:#f4f2ee;--border:#e5e2dc;--shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.03);--shadow-hover:0 4px 16px rgba(0,0,0,0.06),0 8px 24px rgba(0,0,0,0.04);--radius:10px;--radius-lg:16px;--ease:cubic-bezier(0.4,0,0.2,1)}
+        :root{--primary:#23262d;--primary-light:#2f333b;--accent:#8a6d4b;--accent-light:#b39a76;--blue:#5f7d97;--violet:#7a7391;--rose:#9c7373;--teal:#6d8a7e;--ink:#4c5561;--amber:#9a7f45;--wine:#7a555b;--gold:#b0925a;--text-dark:#22252c;--text-body:#3f434d;--text-muted:#6d727d;--text-faint:#a2a6b0;--bg:#fbfaf8;--bg-card:#ffffff;--bg-warm:#f5f3ef;--border:#e8e5df;--shadow:0 1px 2px rgba(30,32,40,0.04);--shadow-hover:0 3px 12px rgba(30,32,40,0.06);--radius:6px;--radius-lg:10px;--ease:cubic-bezier(0.4,0,0.2,1)}
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth;scroll-padding-top:84px}
         body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text-body);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -399,6 +399,52 @@
         .page-crumb a{color:var(--accent);text-decoration:none}
         .page-crumb a:hover{text-decoration:underline}
         @media(max-width:600px){.page-header{padding:96px 0 32px}}
+
+        /* ===== Koh editorial layer ===== */
+        .hero{min-height:0;padding:120px 0 84px;background:var(--bg)}
+        .hero::before,.hero::after{display:none}
+        .hero-content{gap:48px;justify-content:flex-start;text-align:left}
+        .hero-name,.hero-fields,.hero-photo-wrap{animation:none;opacity:1}
+        .hero-name{font-size:clamp(2.4rem,4.4vw,3.4rem)}
+        .hero-photo{border:0;border-radius:3px;box-shadow:0 10px 26px rgba(30,32,40,0.10);width:200px;height:250px}
+        .scroll-hint{display:none}
+        .page-header{background:var(--bg);border-bottom:1px solid var(--border);padding:104px 0 30px}
+        .page-header::before{display:none}
+        .hero-field,.hero-field:hover{color:var(--ink)}
+        .section{padding:72px 0}
+        .section-label,.page-crumb{color:var(--accent)}
+        .reveal{transform:translateY(10px)}
+        /* remove every decorative colored bar, dot, glow */
+        .field-card::before,.news-item::before,.media-item::before,.paper-card::before,.wip-item::before,.pg-chapter::before,.pg-emp-item::before,.go-card::before,.coffee-card::before,.culture-card::before,.music-card::before,.explore-card::before,.sel-paper::before,.sel-paper::after,.paper-part-head::after{display:none!important}
+        .paper-section-dot,.paper-part-dot{background:var(--text-faint)!important}
+        /* flatten text-based cards into airy borderless rows */
+        .sel-paper,.paper-card,.wip-item,.news-item,.field-card,.about-card,.explore-card,.pub-row,.pubs-card,.contact-link,.fan-story{background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important}
+        .sel-paper:hover,.paper-card:hover,.wip-item:hover,.news-item:hover,.field-card:hover,.about-card:hover,.explore-card:hover,.pub-row:hover,.pubs-card:hover,.contact-link:hover,.fan-story:hover,.media-item:hover,.coffee-card:hover,.culture-card:hover,.music-card:hover,.go-card:hover,.about-card:hover,.pg-book:hover{box-shadow:none!important;transform:none!important}
+        .paper-stack,.wip-grid{gap:0!important}
+        .paper-card,.wip-item,.sel-paper{padding:26px 0!important;border-bottom:1px solid var(--border)!important;border-radius:0!important}
+        .paper-card:last-child,.wip-item:last-child,.sel-paper:last-child{border-bottom:0!important}
+        /* small, consistent stamp thumbnails that sit with the prose */
+        .paper-thumb,.wip-thumb{width:68px!important;height:68px!important;border-radius:2px!important;overflow:hidden!important;border:1px solid var(--border)!important;box-shadow:none!important;flex-shrink:0}
+        .paper-thumb img,.wip-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+        .sel-cover{width:96px!important;border-radius:2px!important;border:1px solid var(--border)!important;box-shadow:none!important}
+        /* keep prose to a readable column (Koh measure) */
+        .paper-main,.wip-main,.sel-body{max-width:780px}
+        .abs-body,.paper-abs{max-width:720px}
+        /* monochrome the badges, tags, links: one accent + neutral greys */
+        .badge.abs2,.badge.rr,.badge.review,.badge.sub,.badge.wip,.badge.presented,.jif,.casq,.sel-label,.paper-presented{color:var(--text-muted)!important}
+        .research-tag{color:var(--accent)!important}
+        .badge-venue{color:var(--text-dark)!important}
+        .paper-title,.wip-title{color:var(--text-dark);font-size:1.18rem!important}
+        .sel-title{color:var(--text-dark);font-size:1.32rem!important}
+        .paper-authors,.pub-authors{color:var(--text-muted)!important;font-size:0.8rem!important}
+        .abs-toggle,.abs-toggle:hover{color:var(--text-muted)!important}
+        .co-author,a.co-author:hover,.pub-doi,.pub-doi:hover{color:var(--accent)!important;text-decoration-color:rgba(138,109,75,0.4)!important}
+        /* footer light */
+        .footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 0}
+        .footer p{color:var(--text-faint)}
+        .footer a{color:var(--text-muted)}
+        .footer a:hover{color:var(--accent)}
+        .explore-icon{opacity:.8}
     </style>
 </head>
 <body>
@@ -418,10 +464,8 @@
         </div></div></section>
 <section class="section section-warm" id="fields"><div class="container"><div class="reveal"><div class="section-label">Research Fields</div><h2 class="section-title">What I work on</h2></div><div class="fields-row" style="margin-top:32px;"><div class="field-card reveal"><div class="field-name">Quantitative History</div><div class="field-desc">Long-run questions answered with archival data and causal methods: institutions, kinship, demography, and technological change in China and beyond.</div></div><div class="field-card reveal"><div class="field-name">Political Science</div><div class="field-desc">Formal theory and causal evidence on political accountability, elites, and institutions: climate pledges, elite networks, and the rules that constrain government.</div></div><div class="field-card reveal"><div class="field-name">Development Economics</div><div class="field-desc">State capacity, human capital, and structural transformation in developing economies.</div></div><div class="field-card reveal"><div class="field-name">Micro Theory</div><div class="field-desc">Screening, pricing, and mechanism design under private information: optimal rules, credible commitment, and equilibrium selection when agents choose strategically.</div></div></div></div></section>
 <section class="section section-warm" id="explore"><div class="container"><div class="reveal"><div class="section-label">Explore</div><h2 class="section-title">More from this site</h2><p class="section-desc">The full site is split into pages so you can jump straight to what interests you.</p></div><div class="explore-grid"><a class="explore-card reveal" href="papers.html"><div class="explore-icon">&#128214;</div><div class="explore-name">Research</div><div class="explore-desc">The four fields I work on, with selected papers and work in progress.</div><span class="explore-arrow">&#8594;</span></a><a class="explore-card reveal" href="media.html"><div class="explore-icon">&#127908;</div><div class="explore-name">Media</div><div class="explore-desc">WeChat essays explaining economics research, and short Douyin videos.</div><span class="explore-arrow">&#8594;</span></a><a class="explore-card reveal" href="resources.html"><div class="explore-icon">&#128218;</div><div class="explore-name">Resources</div><div class="explore-desc">Free reading lists, chapter translations, and method slides I compiled.</div><span class="explore-arrow">&#8594;</span></a><a class="explore-card reveal" href="life.html"><div class="explore-icon">&#9749;</div><div class="explore-name">Life</div><div class="explore-desc">Coffee, Go, LeBron James, stories, and music.</div><span class="explore-arrow">&#8594;</span></a></div></div></section>
-<section class="map-section" id="visitors"><div class="container"><div class="map-header reveal"><div class="map-label">Visitors</div><div class="map-title">Where Readers Come From</div></div><div class="map-wrap reveal"><canvas id="visitorMap" width="900" height="450"></canvas></div><div class="map-stats reveal"><div class="map-stat"><div class="map-stat-num" id="totalVisits">0</div><div class="map-stat-label">Total Visits</div></div><div class="map-stat"><div class="map-stat-num" id="countryCount">0</div><div class="map-stat-label">Countries</div></div></div></div></section>
 <section class="section" id="contact"><div class="container"><div class="reveal"><div class="section-label">Contact</div><h2 class="section-title">Get in touch</h2></div><div class="contact-grid" style="margin-top:32px;"><div class="contact-text reveal"><h3>Always happy to talk</h3><p>Whether you have feedback on my work, want to collaborate, or just want to chat about coffee, Go, or LeBron James, I would love to hear from you.</p><a href="mailto:shumingyu@foxmali.com" class="contact-btn">Send Email &#8594;</a></div><div class="contact-links reveal"><a href="mailto:shumingyu@foxmali.com" class="contact-link"><div><div class="contact-link-name">Email</div><div class="contact-link-sub">shumingyu@foxmali.com</div></div><span class="contact-link-arrow">&#8594;</span></a><a href="https://scholar.google.com/citations?hl=en&user=v9sbN-gAAAAJ" class="contact-link"><div><div class="contact-link-name">Google Scholar</div><div class="contact-link-sub">Mingyu Shu</div></div><span class="contact-link-arrow">&#8594;</span></a><a href="https://github.com/Mingyu-Shu" class="contact-link"><div><div class="contact-link-name">GitHub</div><div class="contact-link-sub">@Mingyu-Shu</div></div><span class="contact-link-arrow">&#8594;</span></a></div></div></div></section>
-<footer class="footer"><div class="container"><p>&copy; 2026 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer><button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button><div class="e-pet" id="petNailong" style="width:100px;height:93px;bottom:20px;right:120px;"><span class="e-pet-name">Nailong</span><div class="e-pet-bubble" id="bubbleNailong"></div><img src="pet-nailong.png" alt="Nailong"></div><script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-<script>
+<footer class="footer"><div class="container"><p>&copy; 2026 Mingyu Shu. Built with curiosity and caffeine.</p></div></footer><button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button><script>
 (function(){
     var nav=document.getElementById('nav'),navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks'),backTop=document.getElementById('backTop');
     function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60);backTop.classList.toggle('show',window.scrollY>500)}
@@ -433,45 +477,7 @@
     var reveals=document.querySelectorAll('.reveal'),observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
     reveals.forEach(function(el){observer.observe(el)});
 })();
-(function(){
-    var canvas=document.getElementById('visitorMap'),ctx=canvas.getContext('2d'),W=900,H=450;
-    function drawMap(countries,visits){
-        ctx.fillStyle='#faf9f7';ctx.fillRect(0,0,W,H);
-        ctx.strokeStyle='#e5e2dc';ctx.lineWidth=0.3;
-        for(var lat=-80;lat<=80;lat+=20){var y=(90-lat)/180*H;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}
-        for(var lon=-180;lon<=180;lon+=30){var x=(lon+180)/360*W;ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}
-        if(countries&&countries.features){countries.features.forEach(function(f){if(f.geometry&&f.geometry.coordinates){var coords=f.geometry.coordinates;if(f.geometry.type==='Polygon')coords=[coords];coords.forEach(function(poly){if(poly&&poly.length){ctx.beginPath();poly[0].forEach(function(c,i){var x=(c[0]+180)/360*W,y=(90-c[1])/180*H;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)});ctx.closePath();ctx.fillStyle='rgba(154,125,90,0.12)';ctx.fill();ctx.strokeStyle='rgba(154,125,90,0.25)';ctx.lineWidth=0.5;ctx.stroke()}})}})}
-        if(visits){var maxV=0;for(var k in visits)if(visits[k]>maxV)maxV=visits[k];for(var code in visits){var c=countryCoords[code];if(c){var x=(c[1]+180)/360*W,y=(90-c[0])/180*H,r=Math.max(2,Math.min(8,visits[code]/maxV*8));ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle='rgba(154,125,90,0.6)';ctx.fill();ctx.beginPath();ctx.arc(x,y,r+3,0,Math.PI*2);ctx.fillStyle='rgba(154,125,90,0.1)';ctx.fill()}}}
-    }
-    var countryCoords={CN:[35,105],US:[38,-97],GB:[54,-2],DE:[51,10],FR:[46,2],JP:[36,138],KR:[36,128],AU:[-25,134],CA:[56,-106],SG:[1.3,103.8],HK:[22.3,114.2],TW:[23.7,121],NL:[52.1,5.3],CH:[47,8],SE:[62,15],IT:[42.8,12.8],ES:[40,-4],BR:[-14.2,-51.9],IN:[20.6,79],RU:[61,105],MX:[23.6,-102.6]};
-    var visits=JSON.parse(localStorage.getItem('mv')||'{}'),total=0,cc=0;
-    for(var k in visits){total+=visits[k];cc++}
-    document.getElementById('totalVisits').textContent=total;document.getElementById('countryCount').textContent=cc;
-    drawMap(null,visits);
-    fetch('https://ipapi.co/json/').then(function(r){return r.json()}).then(function(d){
-        var code=d.country_code;if(code){visits[code]=(visits[code]||0)+1;localStorage.setItem('mv',JSON.stringify(visits));total++;cc=Object.keys(visits).length;document.getElementById('totalVisits').textContent=total;document.getElementById('countryCount').textContent=cc;drawMap(null,visits)}
-        fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(r){return r.json()}).then(function(topo){var countries=topojson.feature(topo,topo.objects.countries);drawMap(countries,visits)}).catch(function(){drawMap(null,visits)})
-    }).catch(function(){fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(r){return r.json()}).then(function(topo){var countries=topojson.feature(topo,topo.objects.countries);drawMap(countries,visits)}).catch(function(){drawMap(null,visits)})});
-})();
-(function(){
-    var nailong=document.getElementById('petNailong');
-    var bubbleN=document.getElementById('bubbleNailong');
-    if(!nailong)return;
-    var msgs=['Scroll down to see my research!','Reading papers is my hobby~','Economics is fun, right?','Drag me anywhere you like!','Nailong approves of this page!','Which paper should I read next?','Hmm... an interesting graph!','Keep going, friend!'];
-    function showBubble(el,msg,dur){el.textContent=msg;el.classList.add('show');clearTimeout(el._tid);el._tid=setTimeout(function(){el.classList.remove('show')},dur||3000)}
-    function hop(){nailong.classList.add('bounce');setTimeout(function(){nailong.classList.remove('bounce')},400)}
-    var lastActive=Date.now();
-    function activity(){lastActive=Date.now()}
-    nailong.addEventListener('click',function(){activity();showBubble(bubbleN,msgs[Math.floor(Math.random()*msgs.length)],3000);hop()});
-    var hoverShown=0;
-    nailong.addEventListener('mouseenter',function(){activity();var now=Date.now();if(now-hoverShown>6000){hoverShown=now;showBubble(bubbleN,'Hi! I am Nailong. Click or drag me~',2500)}});
-    var dragging=false,offX=0,offY=0;
-    nailong.addEventListener('mousedown',function(e){activity();var r=nailong.getBoundingClientRect();nailong.style.left=r.left+'px';nailong.style.top=r.top+'px';nailong.style.bottom='auto';nailong.style.right='auto';offX=e.clientX-r.left;offY=e.clientY-r.top;dragging=true;nailong.classList.add('dragging');e.preventDefault()});
-    document.addEventListener('mousemove',function(e){if(!dragging)return;var x=e.clientX-offX,y=e.clientY-offY;x=Math.max(0,Math.min(window.innerWidth-nailong.offsetWidth,x));y=Math.max(0,Math.min(window.innerHeight-nailong.offsetHeight,y));nailong.style.left=x+'px';nailong.style.top=y+'px'});
-    document.addEventListener('mouseup',function(){if(!dragging)return;dragging=false;nailong.classList.remove('dragging');showBubble(bubbleN,'Thanks for moving me!',2000)});
-    setInterval(function(){if(Date.now()-lastActive>60000)showBubble(bubbleN,'Zzz...',2500)},60000);
-    setTimeout(function(){showBubble(bubbleN,'Welcome! I am Nailong, your corner buddy.',4000)},2500);
-})();
+/* map + pet widgets removed in refined redesign */
 </script>
 </body>
 </html>
