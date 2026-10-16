@@ -1830,4 +1830,14 @@ html[data-theme="dark"] .pub-title {
   .pub-row .pub-info {
     grid-area: info;
   }
+
+  /* Media / blog: same single-column collapse so the text is not crushed
+     into the 64px icon gutter. */
+  .media-item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .media-item .media-body {
+    grid-column: 1;
+  }
 }
