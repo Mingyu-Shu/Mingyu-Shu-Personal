@@ -1667,3 +1667,117 @@ html[data-theme="dark"] .pub-title {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Mobile refinement.
+   At 880px the profile column already stacks above the text, but several
+   legacy components kept their desktop sizing. Two of them overflow a phone
+   viewport and force the whole page into a horizontal scroll, which is what
+   makes the layout look jumbled: the call-to-action card sets min-width:240px
+   on its text, and the Contact block is still a rigid 1fr/1fr grid holding a
+   long unbreakable email. The rules below reclaim the side gutters, collapse
+   the two-column blocks, let long tokens break, and cap every image.
+   ========================================================================== */
+@media (max-width: 880px) {
+  .site {
+    width: min(100% - 28px, 700px);
+  }
+
+  .container {
+    padding: 0 6px;
+  }
+
+  .site,
+  .content,
+  .content .container,
+  .page-section {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .pubs-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .pubs-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.05rem;
+  }
+
+  .pubs-info {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .pubs-title {
+    font-size: 19px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-text p,
+  .contact-link,
+  .contact-link-sub {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .pg-book {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .pg-book-cover {
+    width: min(170px, 52%);
+  }
+
+  .contact {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .contact a,
+  .contact strong {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 520px) {
+  .site {
+    width: min(100% - 20px, 700px);
+    margin-top: 22px;
+  }
+
+  .container {
+    padding: 0 2px;
+  }
+
+  .sidebar h1 {
+    font-size: 27px;
+  }
+
+  .paper-title,
+  .wip-title,
+  .sel-title,
+  .pub-title,
+  .media-title,
+  .pg-book-title,
+  .pg-chapter-title {
+    font-size: 18px;
+  }
+
+  .abs-body {
+    padding-left: 14px;
+    font-size: 16px;
+  }
+}
