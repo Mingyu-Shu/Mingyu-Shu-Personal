@@ -1781,3 +1781,53 @@ html[data-theme="dark"] .pub-title {
     font-size: 16px;
   }
 }
+
+/* ==========================================================================
+   Mobile corrections for News and Publications (this block is last so it
+   wins over the earlier rules that pushed the body into the narrow gutter
+   track and hid the journal covers).
+   ========================================================================== */
+@media (max-width: 880px) {
+  .news-item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2px;
+  }
+
+  .news-item .news-body {
+    grid-column: 1;
+  }
+
+  .pub-row {
+    grid-template-columns: 62px minmax(0, 1fr);
+    grid-template-areas:
+      "cover year"
+      "cover info";
+    column-gap: 16px;
+    row-gap: 3px;
+    align-items: start;
+  }
+
+  .pub-row .pub-cover {
+    display: block;
+    grid-area: cover;
+    width: 62px;
+    height: auto;
+    align-self: start;
+  }
+
+  .pub-row .pub-cover img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: initial;
+    display: block;
+  }
+
+  .pub-row .pub-year {
+    grid-area: year;
+  }
+
+  .pub-row .pub-info {
+    grid-area: info;
+  }
+}
