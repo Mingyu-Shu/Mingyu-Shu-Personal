@@ -2163,10 +2163,13 @@
   </script>
 </head>
 <body id="top">
+  <div class="top-controls">
+  <button class="lang-toggle" type="button" aria-pressed="false" aria-label="切换到中文">中文</button>
   <button class="theme-toggle" type="button" aria-label="Switch to night mode">
     <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"></path></svg>
     <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2.4v2M12 19.6v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.4 12h2M19.6 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg>
   </button>
+  </div>
   <main class="site">
 <aside class="sidebar">
   <h1>Mingyu Shu</h1>
@@ -2374,6 +2377,56 @@
     links.forEach(function(a,i){ a.classList.toggle('is-current',i===best); });
   }
   window.addEventListener('scroll',mark,{passive:true}); mark();
+})();
+  </script>
+  <script>
+(function(){
+  var STATUS={"Reject & Resubmit":"\u9000\u4fee\u91cd\u6295","Revise & Resubmit":"\u4fee\u6539\u91cd\u6295","Working Paper":"\u5de5\u4f5c\u8bba\u6587","Under Review":"\u5ba1\u7a3f\u4e2d"};
+  var AFFSUB={"Economic History":"\u7ecf\u6d4e\u53f2","Political Economy":"\u653f\u6cbb\u7ecf\u6d4e\u5b66"};
+  var PGSUB={"Experimental Economics":"\u5b9e\u9a8c\u7ecf\u6d4e\u5b66","Reading Lists":"\u9605\u8bfb\u4e66\u5355"};
+  var D={
+    "About":"\u5173\u4e8e","News":"\u52a8\u6001","Research":"\u7814\u7a76","Media":"\u5a92\u4f53","Resources":"\u8d44\u6e90","Contact":"\u8054\u7cfb",
+    "Hefei University of Economics":"\u5408\u80a5\u7ecf\u6d4e\u5b66\u9662",
+    "Working papers, work in progress, and published articles, grouped by field.":"\u6309\u9886\u57df\u5212\u5206\u7684\u5de5\u4f5c\u8bba\u6587\u3001\u5728\u7814\u8bba\u6587\u4e0e\u5df2\u53d1\u8868\u8bba\u6587\u3002",
+    "My work covers economic history, political science, development economics, and micro theory. I am always happy to receive feedback, criticism, or the chance to collaborate.":"\u6211\u7684\u7814\u7a76\u6db5\u76d6\u7ecf\u6d4e\u53f2\u3001\u653f\u6cbb\u5b66\u3001\u53d1\u5c55\u7ecf\u6d4e\u5b66\u4e0e\u5fae\u89c2\u7406\u8bba\uff0c\u6b22\u8fce\u53cd\u9988\u3001\u6279\u8bc4\u4e0e\u5408\u4f5c\u3002",
+    "Research Fields":"\u7814\u7a76\u9886\u57df",
+    "Economic History":"\u7ecf\u6d4e\u53f2","Political Science":"\u653f\u6cbb\u5b66","Micro Theory":"\u5fae\u89c2\u7406\u8bba","Financial Accounting":"\u8d22\u52a1\u4f1a\u8ba1",
+    "Aug 2026":"2026 \u5e74 8 \u6708",
+    "Selected for the Anhui Province Young Scientist Cultivation Program":"\u5165\u9009\u5b89\u5fbd\u7701\u9752\u5e74\u79d1\u5b66\u5bb6\u57f9\u80b2\u8ba1\u5212",
+    "Honored to be selected for the Anhui Province Young Scientist Cultivation Program (\u5b89\u5fbd\u7701\u9752\u5e74\u79d1\u5b66\u5bb6\u57f9\u80b2\u8ba1\u5212).":"\u5f88\u8363\u5e78\u5165\u9009\u5b89\u5fbd\u7701\u9752\u5e74\u79d1\u5b66\u5bb6\u57f9\u80b2\u8ba1\u5212\u3002",
+    "Award":"\u83b7\u5956",
+    "Economics":"\u7ecf\u6d4e\u5b66","Operations Research":"\u8fd0\u7b79\u5b66","Science":"\u79d1\u5b66","Undergraduate Publications":"\u672c\u79d1\u9636\u6bb5\u6210\u679c",
+    "Working Papers":"\u5de5\u4f5c\u8bba\u6587","Work in Progress":"\u5728\u7814\u8bba\u6587",
+    "Always happy to talk":"\u6b22\u8fce\u4ea4\u6d41",
+    "Whether you have feedback on my work, want to collaborate, or just want to chat about coffee, Go, or LeBron James, I would love to hear from you.":"\u65e0\u8bba\u4f60\u60f3\u5c31\u6211\u7684\u7814\u7a76\u63d0\u4f9b\u53cd\u9988\u3001\u5bfb\u6c42\u5408\u4f5c\uff0c\u8fd8\u662f\u53ea\u60f3\u804a\u804a\u5496\u5561\u3001\u56f4\u68cb\u6216\u52d2\u5e03\u6717\u00b7\u8a79\u59c6\u65af\uff0c\u6211\u90fd\u4e50\u4e8e\u6536\u5230\u4f60\u7684\u6765\u4fe1\u3002",
+    "Send Email \u2192":"\u53d1\u9001\u90ae\u4ef6 \u2192",
+    "Email":"\u90ae\u7bb1",
+    "Last updated 16 October 2026":"\u6700\u540e\u66f4\u65b0\u4e8e 2026 \u5e74 10 \u6708 16 \u65e5"
+  };
+  var EXACT_SEL=".profile-nav a,.affiliation,.section-lede,.page-section>h2,#about .about-text p,.meta-lines dt,.meta-lines dd span,#news .news-date,#news .news-title,#news .news-desc,#news .news-tag,.paper-part-name,.paper-section-name,#contact h3,#contact .contact-text p,#contact .contact-btn,#contact .contact-link-name,.site-footer";
+  var SUB_SEL=[[".badge",STATUS],[".affiliation-sub",AFFSUB],["#resources .pg-sub-name",PGSUB]];
+  var origs=new WeakMap();
+  var items=[];
+  function directText(el,kind,map){ for(var n=el.firstChild;n;n=n.nextSibling){ if(n.nodeType===3&&n.nodeValue.trim()){ if(!origs.has(n))origs.set(n,n.nodeValue); items.push({tn:n,kind:kind,map:map}); } } }
+  document.querySelectorAll(EXACT_SEL).forEach(function(el){ directText(el,'exact',D); });
+  SUB_SEL.forEach(function(g){ document.querySelectorAll(g[0]).forEach(function(el){ directText(el,'sub',g[1]); }); });
+  function apply(lang){
+    items.forEach(function(it){
+      var tn=it.tn, orig=origs.get(tn);
+      if(lang==='zh'){
+        if(it.kind==='sub'){ var v=orig; Object.keys(it.map).forEach(function(k){ if(v.indexOf(k)>=0) v=v.split(k).join(it.map[k]); }); tn.nodeValue=v; }
+        else { var t=orig.trim(); if(it.map[t]!=null){ var lead=orig.slice(0,orig.length-orig.replace(/^\s+/,'').length); var trail=orig.slice(orig.replace(/\s+$/,'').length); tn.nodeValue=lead+it.map[t]+trail; } else tn.nodeValue=orig; }
+      } else { tn.nodeValue=orig; }
+    });
+    var btn=document.querySelector('.lang-toggle');
+    if(btn){ btn.textContent=lang==='zh'?'English':'\u4e2d\u6587'; btn.setAttribute('aria-pressed',lang==='zh'?'true':'false'); btn.setAttribute('aria-label',lang==='zh'?'Switch to English':'\u5207\u6362\u5230\u4e2d\u6587'); }
+    document.documentElement.setAttribute('lang',lang==='zh'?'zh-CN':'en');
+  }
+  var KEY='shu-lang', cur='en';
+  try{ if(localStorage.getItem(KEY)==='zh') cur='zh'; }catch(e){}
+  apply(cur);
+  var btn=document.querySelector('.lang-toggle');
+  if(btn){ btn.addEventListener('click',function(){ cur=cur==='zh'?'en':'zh'; try{localStorage.setItem(KEY,cur);}catch(e){} apply(cur); }); }
 })();
   </script>
 </body>
