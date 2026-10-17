@@ -1841,3 +1841,59 @@ html[data-theme="dark"] .pub-title {
     grid-column: 1;
   }
 }
+
+/* ==========================================================================
+   Language switch: top-right controls cluster (中文 / English + theme)
+   ========================================================================== */
+.top-controls {
+  position: fixed;
+  z-index: 20;
+  top: 22px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-controls .theme-toggle {
+  position: static;
+  top: auto;
+  right: auto;
+}
+
+.lang-toggle {
+  height: 40px;
+  min-width: 40px;
+  padding: 0 15px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  border-color: var(--ring);
+  color: var(--ring);
+}
+
+@media (max-width: 880px) {
+  .top-controls {
+    top: 12px;
+    right: 14px;
+  }
+}
+
+@media print {
+  .top-controls,
+  .lang-toggle {
+    display: none !important;
+  }
+}
