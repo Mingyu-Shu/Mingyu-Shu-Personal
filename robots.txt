@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mingyu-shu.github.io/Mingyu-Shu-Personal/sitemap.xml
