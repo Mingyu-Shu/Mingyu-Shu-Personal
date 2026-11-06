@@ -183,6 +183,16 @@ button:focus-visible {
   margin: 0 0 22px;
 }
 
+.sidebar h1 .h1-cn {
+  display: block;
+  margin-top: 7px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
 .portrait {
   display: block;
   width: var(--sbw);
