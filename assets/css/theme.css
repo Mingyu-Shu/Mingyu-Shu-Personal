@@ -565,6 +565,21 @@ p {
   font-family: var(--font);
 }
 
+/* nested heading inside one section, e.g. Working Papers under an applied area */
+.paper-sub-head {
+  margin: 26px 0 4px;
+  padding: 0;
+  border: 0;
+}
+
+.paper-sub-name {
+  font-size: 15.5px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--muted);
+  font-family: var(--font);
+}
+
 .paper-count {
   font-size: 15px;
   font-style: italic;
