@@ -179,18 +179,18 @@ button:focus-visible {
   line-height: 1.12;
   letter-spacing: -0.02em;
   text-align: center;
+  white-space: nowrap;
   color: var(--text);
   margin: 0 0 22px;
 }
 
 .sidebar h1 .h1-cn {
-  display: block;
-  margin-top: 7px;
+  margin-left: 3px;
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.02em;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .portrait {
@@ -1422,6 +1422,14 @@ html[data-theme="dark"] img {
   :root {
     --sbw: 220px;
     --gap: 44px;
+  }
+
+  .sidebar h1 {
+    font-size: 27px;
+  }
+
+  .sidebar h1 .h1-cn {
+    font-size: 15.5px;
   }
 }
 
