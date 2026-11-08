@@ -1607,33 +1607,43 @@ html[data-theme="dark"] img {
 
 .meta-lines dd {
   margin: 0;
-  font-size: 19px;
-  line-height: 1.5;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   color: var(--text);
 }
 
-.meta-lines dd > span:not(:last-child)::after {
+.meta-lines .rf-line {
+  display: block;
+}
+
+.meta-lines .rf-name {
+  font-family: var(--font);
+  font-size: 19px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+.meta-lines .rf-note {
+  font-family: var(--font);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.meta-lines .rf-note::before {
   content: "\00b7";
+  margin: 0 9px;
   color: var(--faint);
-  margin: 0 10px;
 }
 
 @media (max-width: 880px) {
   .meta-lines {
     grid-template-columns: 1fr;
     gap: 4px 0;
-  }
-
-  .meta-lines dd {
-    gap: 2px;
-  }
-
-  .meta-lines dd > span:not(:last-child)::after {
-    content: none;
-    margin: 0;
   }
 }
 
