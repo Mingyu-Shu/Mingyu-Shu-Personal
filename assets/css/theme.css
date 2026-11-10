@@ -907,6 +907,14 @@ a.co-author:hover {
   color: var(--text);
 }
 
+.abs-body .math {
+  white-space: nowrap;
+}
+
+.abs-body .math i {
+  letter-spacing: 0.01em;
+}
+
 /* ---------- links under an entry ---------- */
 .wip-links,
 .pg-dl-row,
