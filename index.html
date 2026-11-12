@@ -2165,6 +2165,10 @@
         /* single-accent cleanup for remaining decorative dots & labels */
         .life-sub-dot,.pg-sub-dot{background:var(--accent)!important}
         .culture-card .culture-card-tag{color:var(--accent)!important}
+        /* larger journal cover on the Publications card */
+        .paper-card.st-pub .paper-thumb.is-cover{width:140px!important;height:auto!important;overflow:visible!important;border:0!important;border-radius:0!important;background:none!important}
+        .paper-card.st-pub .paper-thumb.is-cover img{width:100%!important;height:auto!important;min-height:0!important;object-fit:contain;transform:none!important;border-radius:6px;border:1px solid var(--border);box-shadow:0 8px 22px rgba(30,30,30,0.14)}
+        @media(max-width:880px){.paper-card.st-pub .paper-thumb.is-cover{width:116px!important}}
     
   </style>
   <link rel="stylesheet" href="assets/css/theme.css">
