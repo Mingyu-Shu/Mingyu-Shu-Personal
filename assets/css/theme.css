@@ -875,6 +875,11 @@ a.co-author:hover {
   content: "Abstract";
 }
 
+/* the Publications card supplies its own labels: Presented, PDF, Abstract */
+.pub-actions .abs-toggle::before {
+  content: none;
+}
+
 .abs-toggle > * ,
 .abs-toggle {
   line-height: 1.2;
