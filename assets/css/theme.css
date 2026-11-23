@@ -786,6 +786,12 @@ a.co-author:hover {
   color: var(--faint);
 }
 
+.corr {
+  font-style: normal;
+  color: var(--faint);
+  margin-left: 1px;
+}
+
 @media (min-width: 1260px) {
   .co-affil {
     white-space: nowrap;
