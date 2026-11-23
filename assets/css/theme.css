@@ -773,10 +773,23 @@ p {
   font-weight: 600;
   font-style: normal;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 a.co-author:hover {
   color: var(--link-hover);
+}
+
+.co-affil {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--faint);
+}
+
+@media (min-width: 1260px) {
+  .co-affil {
+    white-space: nowrap;
+  }
 }
 
 .wip-former,
